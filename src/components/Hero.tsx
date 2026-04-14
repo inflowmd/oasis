@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const phrases = [
@@ -71,15 +72,15 @@ export default function Hero() {
           </div>
         </div>
         <div className="hr" style={{ width: "clamp(300px,38%,460px)", flexShrink: 0 }}>
-          <div style={{ width: "100%", aspectRatio: "4/5", borderRadius: 24, overflow: "hidden", background: "linear-gradient(180deg,var(--gl),var(--gp))", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(204,221,223,0.3)" }}>
-            <div style={{ textAlign: "center" }}>
-              <div style={{ width: 80, height: 80, borderRadius: "50%", border: "1px solid rgba(55,82,83,0.1)", margin: "0 auto 12px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="#375253" opacity="0.2" />
-                </svg>
-              </div>
-              <p style={{ fontSize: 12, color: "var(--ts)" }}>Dr. Mehta Photo</p>
-            </div>
+          <div style={{ position: "relative", width: "100%", aspectRatio: "4/5", borderRadius: 24, overflow: "hidden", background: "linear-gradient(180deg,var(--gl),var(--gp))", border: "1px solid rgba(204,221,223,0.3)" }}>
+            <Image
+              src="/ssmehta.jpg"
+              alt="Dr. Steven Mehta — Board-Certified Cardiologist & Longevity Physician"
+              fill
+              priority
+              sizes="(max-width: 900px) 70vw, 460px"
+              className="object-cover object-top"
+            />
           </div>
           <div className="hero-creds" style={{ display: "flex", gap: 28, marginTop: 18, flexWrap: "wrap", padding: "0 4px" }}>
             <div style={{ display: "flex", alignItems: "stretch", gap: 12 }}>
