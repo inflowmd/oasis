@@ -1,11 +1,18 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer style={{ background: "var(--darker)", padding: "56px 0 32px" }}>
       <div className="mx">
         <div className="ff" style={{ display: "flex", justifyContent: "space-between", gap: 32, marginBottom: 36 }}>
           <div>
-            <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#fff" }}>Oasis</div>
-            <div style={{ fontSize: 8, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.25)" }}>Longevity Medicine</div>
+            <Image
+              src="/logo.webp"
+              alt="Oasis Longevity Medicine"
+              width={120}
+              height={120}
+              style={{ height: 32, width: "auto" }}
+            />
             <p style={{ fontSize: 14, color: "rgba(255,255,255,0.25)", marginTop: 14, maxWidth: 240, lineHeight: 1.65 }}>
               Physician-led longevity medicine grounded in cardiovascular science.
             </p>
