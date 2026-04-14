@@ -29,7 +29,7 @@ export default function Navbar() {
         borderBottom: scrolled ? "1px solid rgba(204,221,223,0.3)" : "1px solid transparent",
       }}
     >
-      <div className="mx" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 80 }}>
+      <div className="mx" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: scrolled ? 90 : 130, transition: "height 0.4s cubic-bezier(0.25,0.46,0.45,0.94)" }}>
         <a href="/" style={{ display: "flex", alignItems: "center" }}>
           <Image
             src="/logo.webp"
@@ -37,7 +37,7 @@ export default function Navbar() {
             width={120}
             height={120}
             priority
-            style={{ height: 52, width: "auto", maxHeight: "none" }}
+            style={{ height: scrolled ? 70 : 110, width: "auto", maxHeight: "none", transition: "height 0.4s cubic-bezier(0.25,0.46,0.45,0.94)" }}
           />
         </a>
         <div className="nl" style={{ display: "flex", alignItems: "center", gap: 32 }}>
