@@ -149,6 +149,53 @@ a { text-decoration: none; color: inherit; }
 }
 .cl:hover .ic { transform: scale(1.1); }
 
+.modality-mini:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(55, 82, 83, 0.08);
+  border-color: rgba(184, 150, 90, 0.15) !important;
+}
+
+.cta-section {
+  background: linear-gradient(165deg, #0f1f20 0%, #1a2e2f 50%, #1f3536 100%);
+  padding: 160px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184, 150, 90, 0.06), transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 6%;
+}
+.cta-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.cta-btns > a { width: auto; }
+.cta-btns > a:last-child:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+}
+
 .story-progress { position: absolute; bottom: 0; left: 0; height: 3px; background: var(--gold); border-radius: 3px; }
 @keyframes fillBar { from { width: 0; } to { width: 100%; } }
 
@@ -224,4 +271,11 @@ a { text-decoration: none; color: inherit; }
   .stat-div { display: none !important; }
   .glass-doc { width: 100%; }
   .hero-btns { justify-content: center; }
+  .creds-grid { grid-template-columns: 1fr 1fr !important; }
+  .modality-card { padding: 32px 24px !important; margin: 40px auto !important; }
+  .modality-grid-mini { grid-template-columns: 1fr !important; }
+  .cta-section { padding: 100px 0 !important; }
+  .cta-section::before { width: 380px !important; height: 380px !important; }
+  .cta-btns > a { align-self: center; }
 }
+

@@ -15,7 +15,7 @@ const steps: Step[] = [
   {
     n: "1",
     title: (<>Application &amp; <span className="fdi" style={{ color: "var(--gm)" }}>Discovery</span></>),
-    body: "A 60-minute consultation where Dr. Mehta learns your history, goals, and lifestyle. Extensive lab testing far beyond standard panels.",
+    body: "An unhurried, customized first consultation. Dr. Mehta takes whatever time is needed to understand your full picture — paired with lab testing that goes far beyond standard panels.",
     image: "/application-discovery.jpeg",
     alt: "Application and discovery consultation with Dr. Mehta",
     borderBottom: true,

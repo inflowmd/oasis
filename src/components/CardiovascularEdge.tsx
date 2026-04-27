@@ -6,14 +6,14 @@ const stats = [
 ];
 
 const bullets = [
-  "Coronary artery calcium (CAC) scoring",
-  "CT coronary angiography with AI analysis",
-  "Advanced lipid panels — ApoB, Lp(a), LDL-P",
-  "Carotid intima-media thickness ultrasound",
-  "VO₂ max testing (CPET)",
-  "Echocardiography and cardiac imaging",
-  "GLP-1/SGLT2 with cardiac monitoring",
-  "Hormonal therapy with CV safety oversight",
+  "Advanced cardiac imaging and arterial assessment",
+  "Early detection of silent vascular disease",
+  "Precision lipid and inflammation profiling",
+  "Metabolic risk stratification beyond standard panels",
+  "Cardiorespiratory fitness and performance evaluation",
+  "Structural heart and functional assessment",
+  "Safe use of emerging cardiometabolic therapies",
+  "Hormonal and metabolic optimization with cardiac oversight",
 ];
 
 export default function CardiovascularEdge() {

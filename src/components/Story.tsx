@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 
 const stories = [
@@ -32,6 +33,41 @@ const stories = [
     label: "Partnership",
     title: "A Collaborative Model",
     text: "At the heart of this work is a collaborative physician–client relationship grounded in trust, transparency, and shared commitment.\n\nLongevity is not simply the extension of years. It is the preservation of the capacity to live them fully.",
+  },
+];
+
+type Cred = { title: string; body: string; icon: ReactNode };
+
+const creds: Cred[] = [
+  {
+    title: "Double Board-Certified",
+    body: "Internal Medicine and Cardiovascular Disease.",
+    icon: (<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="#B8965A" />),
+  },
+  {
+    title: "ACC Governor, Arizona",
+    body: "American College of Cardiology — Arizona Chapter.",
+    icon: (<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#B8965A" />),
+  },
+  {
+    title: "Phoenix Top Docs",
+    body: "Phoenix Magazine — peer-nominated.",
+    icon: (<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="#B8965A" />),
+  },
+  {
+    title: "Director of CV Intervention",
+    body: "Former Chief of Medical Staff and CMO.",
+    icon: (<path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" fill="#B8965A" />),
+  },
+  {
+    title: "Fellowship Trained",
+    body: "Arizona Heart Institute — interventional cardiology.",
+    icon: (<path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="#B8965A" />),
+  },
+  {
+    title: "MBA",
+    body: "Healthcare delivery and patient outcomes.",
+    icon: (<path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" fill="#B8965A" />),
   },
 ];
 
@@ -107,6 +143,46 @@ export default function Story() {
                 />
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Credentials block */}
+        <div id="doctor" style={{ maxWidth: 1000, margin: "100px auto 0" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 36 }}>
+            <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,transparent,rgba(184,150,90,0.35))" }} />
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", whiteSpace: "nowrap" }}>
+              Credentials &amp; Leadership
+            </div>
+            <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(184,150,90,0.35),transparent)" }} />
+          </div>
+          <div className="creds-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 18 }}>
+            {creds.map((c) => (
+              <div
+                key={c.title}
+                className="cd"
+                style={{ padding: "24px 26px" }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 10 }}>
+                  <div
+                    style={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: 10,
+                      background: "rgba(184,150,90,0.1)",
+                      border: "1px solid rgba(184,150,90,0.2)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">{c.icon}</svg>
+                  </div>
+                  <h3 style={{ fontSize: 15, fontWeight: 700, color: "#fff" }}>{c.title}</h3>
+                </div>
+                <p style={{ fontSize: 14, color: "rgba(204,221,223,0.55)", lineHeight: 1.6 }}>{c.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
