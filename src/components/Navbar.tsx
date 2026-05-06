@@ -23,10 +23,10 @@ export default function Navbar() {
         right: 0,
         zIndex: 100,
         transition: "all 0.4s",
-        background: scrolled ? "rgba(245,245,243,0.88)" : "transparent",
+        background: scrolled ? "rgba(250,250,247,0.88)" : "transparent",
         backdropFilter: scrolled ? "blur(14px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(14px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(204,221,223,0.3)" : "1px solid transparent",
+        borderBottom: scrolled ? "1px solid rgba(232,237,232,0.3)" : "1px solid transparent",
       }}
     >
       <div className="mx" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: scrolled ? 90 : 130, transition: "height 0.4s cubic-bezier(0.25,0.46,0.45,0.94)" }}>

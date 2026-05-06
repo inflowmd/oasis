@@ -43,7 +43,7 @@ export default function HowItWorks() {
     <section id="steps" style={{ background: "var(--ow)", padding: "100px 0" }}>
       <div className="mx">
         <div style={{ textAlign: "center", marginBottom: 60 }}>
-          <div className="pill" style={{ background: "var(--gold-pale)", color: "var(--gold)", border: "1px solid rgba(184,150,90,0.15)", marginBottom: 24 }}>
+          <div className="pill" style={{ background: "var(--gold-pale)", color: "var(--gold)", border: "1px solid rgba(201,169,110,0.15)", marginBottom: 24 }}>
             <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--gold)" }} />
             How It Works
           </div>
@@ -55,10 +55,10 @@ export default function HowItWorks() {
           const text = (
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-                <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--gold-pale)", border: "1px solid rgba(184,150,90,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--gold-pale)", border: "1px solid rgba(201,169,110,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <span className="fd" style={{ fontSize: 18, fontWeight: 700, color: "var(--gold)" }}>{s.n}</span>
                 </div>
-                <div style={{ height: 1, flex: 1, background: "linear-gradient(90deg,rgba(184,150,90,0.2),transparent)" }} />
+                <div style={{ height: 1, flex: 1, background: "linear-gradient(90deg,rgba(201,169,110,0.2),transparent)" }} />
               </div>
               <h3 className="fd" style={{ fontSize: 26, fontWeight: 700, color: "var(--td)", marginBottom: 14 }}>{s.title}</h3>
               <p style={{ fontSize: 16, color: "var(--tm)", lineHeight: 1.75 }}>{s.body}</p>
@@ -88,7 +88,7 @@ export default function HowItWorks() {
                 gap: 60,
                 alignItems: "center",
                 padding: "48px 0",
-                borderBottom: s.borderBottom ? "1px solid rgba(204,221,223,0.2)" : undefined,
+                borderBottom: s.borderBottom ? "1px solid rgba(232,237,232,0.2)" : undefined,
               }}
             >
               {s.reverse ? (<>{image}{text}</>) : (<>{text}{image}</>)}

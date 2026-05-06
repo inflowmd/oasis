@@ -2,11 +2,11 @@ export default function WhenToStart() {
   return (
     <section style={{ background: "var(--ow)", padding: "100px 0", position: "relative", overflow: "hidden" }}>
       <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none" }} viewBox="0 0 1000 600" fill="none" preserveAspectRatio="xMidYMid slice">
-        <g opacity="0.04"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#375253" transform="translate(900,100) scale(0.65)" /></g>
-        <g opacity="0.03"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#B8965A" transform="translate(-40,300) scale(0.5)" /></g>
+        <g opacity="0.04"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#1C3538" transform="translate(900,100) scale(0.65)" /></g>
+        <g opacity="0.03"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#C9A96E" transform="translate(-40,300) scale(0.5)" /></g>
       </svg>
       <div className="mx-sm" style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
-        <div className="pill" style={{ background: "var(--gold-pale)", color: "var(--gold)", border: "1px solid rgba(184,150,90,0.15)", marginBottom: 24 }}>
+        <div className="pill" style={{ background: "var(--gold-pale)", color: "var(--gold)", border: "1px solid rgba(201,169,110,0.15)", marginBottom: 24 }}>
           <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--gold)" }} />
           It&apos;s Never Too Early
         </div>
@@ -20,7 +20,7 @@ export default function WhenToStart() {
             <div style={{ width: 28, height: 2, background: "var(--gold)", borderRadius: 2, margin: "0 auto 16px" }} />
             <p style={{ fontSize: 15, color: "var(--tm)", lineHeight: 1.65 }}>Maximize prevention benefits. The highest return on investment in your health.</p>
           </div>
-          <div className="cl" style={{ padding: "36px 28px", textAlign: "center", borderColor: "rgba(184,150,90,0.2)" }}>
+          <div className="cl" style={{ padding: "36px 28px", textAlign: "center", borderColor: "rgba(201,169,110,0.2)" }}>
             <div className="fd" style={{ fontSize: 44, fontWeight: 700, color: "var(--gold)", marginBottom: 8 }}>40–50s</div>
             <div style={{ width: 28, height: 2, background: "var(--gold)", borderRadius: 2, margin: "0 auto 16px" }} />
             <p style={{ fontSize: 15, color: "var(--tm)", lineHeight: 1.65 }}>The turning point. Control how you age. Most clients begin here.</p>

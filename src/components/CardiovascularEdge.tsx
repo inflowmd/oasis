@@ -21,7 +21,7 @@ export default function CardiovascularEdge() {
     <section id="approach" style={{ background: "#fff", padding: "100px 0" }}>
       <div className="mx cvf" style={{ display: "flex", alignItems: "flex-start", gap: "clamp(40px,6vw,80px)" }}>
         <div style={{ flex: 1 }}>
-          <div className="pill" style={{ background: "var(--gold-pale)", color: "var(--gold)", border: "1px solid rgba(184,150,90,0.15)", marginBottom: 28 }}>
+          <div className="pill" style={{ background: "var(--gold-pale)", color: "var(--gold)", border: "1px solid rgba(201,169,110,0.15)", marginBottom: 28 }}>
             <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--gold)" }} />
             The Cardiovascular Edge
           </div>
@@ -52,9 +52,9 @@ export default function CardiovascularEdge() {
             <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               {bullets.map((b) => (
                 <div key={b} style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
-                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: "rgba(184,150,90,0.15)", border: "1px solid rgba(184,150,90,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>
+                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: "rgba(201,169,110,0.15)", border: "1px solid rgba(201,169,110,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#B8965A" />
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#C9A96E" />
                     </svg>
                   </div>
                   <span style={{ fontSize: 17, color: "rgba(255,255,255,0.85)", lineHeight: 1.5 }}>{b}</span>

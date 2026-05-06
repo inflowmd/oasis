@@ -1,13 +1,13 @@
 export default function CTA() {
   return (
-    <section id="apply" className="cta-section">
+    <section id="apply" className="cta-section dark-mesh-3">
       <div className="cta-inner">
         <div
           className="pill"
           style={{
-            background: "rgba(184,150,90,0.1)",
+            background: "rgba(201,169,110,0.1)",
             color: "var(--gold)",
-            border: "1px solid rgba(184,150,90,0.18)",
+            border: "1px solid rgba(201,169,110,0.18)",
             letterSpacing: "0.18em",
             marginBottom: 32,
           }}
@@ -32,7 +32,7 @@ export default function CTA() {
         <p
           style={{
             fontSize: 18,
-            color: "rgba(204,221,223,0.5)",
+            color: "rgba(232,237,232,0.5)",
             lineHeight: 1.7,
             maxWidth: 480,
             margin: "0 auto 48px",

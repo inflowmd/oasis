@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --gd: #375253;
-  --gm: #4a6e6f;
-  --gl: #CCDDDF;
-  --gp: #e8f2f3;
-  --tn: #C3B9AE;
-  --tl: #EDE8E3;
-  --ow: #F5F5F3;
-  --td: #1e2e2f;
-  --tm: #4a5e5f;
-  --ts: #8a9e9f;
-  --gold: #B8965A;
-  --gold-light: #D4B87A;
-  --gold-pale: rgba(184, 150, 90, 0.12);
-  --dark: #1a2e2f;
-  --darker: #0f1f20;
+  --gd: #1C3538;
+  --gm: #2D5A5E;
+  --gl: #E8EDE8;
+  --gp: #EEF3EE;
+  --tn: #F5F1EB;
+  --tl: #F5F1EB;
+  --ow: #FAFAF7;
+  --td: #1C3538;
+  --tm: #3D6B5E;
+  --ts: #7A9A8E;
+  --gold: #C9A96E;
+  --gold-light: #DBBF82;
+  --gold-pale: rgba(201,169,110, 0.12);
+  --dark: #1C3538;
+  --darker: #0F1F1F;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -53,9 +53,9 @@ a { text-decoration: none; color: inherit; }
   border: none;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 4px 20px rgba(184, 150, 90, 0.3);
+  box-shadow: 0 4px 20px rgba(201,169,110, 0.3);
 }
-.btn-gold:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(184, 150, 90, 0.4); }
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(201,169,110, 0.4); }
 
 .btn-outline {
   display: inline-flex;
@@ -73,7 +73,7 @@ a { text-decoration: none; color: inherit; }
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.btn-outline:hover { border-color: var(--gold); color: var(--gold); box-shadow: 0 8px 30px rgba(184, 150, 90, 0.1); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); box-shadow: 0 8px 30px rgba(201,169,110, 0.1); }
 
 .btn-glass {
   display: inline-flex;
@@ -123,10 +123,10 @@ a { text-decoration: none; color: inherit; }
   background: #fff;
   border-radius: 20px;
   padding: 28px;
-  border: 1px solid rgba(204, 221, 223, 0.25);
+  border: 1px solid rgba(232,237,232, 0.25);
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.cl:hover { transform: translateY(-6px); box-shadow: 0 24px 64px rgba(55, 82, 83, 0.1); border-color: rgba(184, 150, 90, 0.15); }
+.cl:hover { transform: translateY(-6px); box-shadow: 0 24px 64px rgba(28,53,56, 0.1); border-color: rgba(201,169,110, 0.15); }
 
 .cd {
   background: rgba(255, 255, 255, 0.04);
@@ -135,7 +135,7 @@ a { text-decoration: none; color: inherit; }
   padding: 28px;
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.cd:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(184, 150, 90, 0.12); transform: translateY(-4px); }
+.cd:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(201,169,110, 0.12); transform: translateY(-4px); }
 
 .ic {
   width: 44px;
@@ -149,14 +149,53 @@ a { text-decoration: none; color: inherit; }
 }
 .cl:hover .ic { transform: scale(1.1); }
 
+/* Dark-section mesh gradient overlays */
+.dark-mesh-1, .dark-mesh-2, .dark-mesh-3 { position: relative; }
+.dark-mesh-1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(45, 90, 94, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(201, 169, 110, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(30, 60, 58, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 90%, rgba(201, 169, 110, 0.03) 0%, transparent 40%);
+}
+.dark-mesh-2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 35% 60%, rgba(45, 90, 94, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 30%, rgba(201, 169, 110, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 75%, rgba(30, 60, 58, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 85%, rgba(201, 169, 110, 0.03) 0%, transparent 40%);
+}
+.dark-mesh-3::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 15% 40%, rgba(45, 90, 94, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 15%, rgba(201, 169, 110, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 85%, rgba(30, 60, 58, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 5% 80%, rgba(201, 169, 110, 0.03) 0%, transparent 40%);
+}
+
 .modality-mini:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(55, 82, 83, 0.08);
-  border-color: rgba(184, 150, 90, 0.15) !important;
+  box-shadow: 0 12px 32px rgba(28,53,56, 0.08);
+  border-color: rgba(201,169,110, 0.15) !important;
 }
 
 .cta-section {
-  background: linear-gradient(165deg, #0f1f20 0%, #1a2e2f 50%, #1f3536 100%);
+  background: linear-gradient(165deg, #0F1F1F 0%, #1C3538 50%, #1f3536 100%);
   padding: 160px 0;
   text-align: center;
   position: relative;
@@ -170,7 +209,7 @@ a { text-decoration: none; color: inherit; }
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(184, 150, 90, 0.06), transparent 70%);
+  background: radial-gradient(circle, rgba(201,169,110, 0.06), transparent 70%);
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
@@ -216,7 +255,7 @@ a { text-decoration: none; color: inherit; }
   height: 20px;
   border-radius: 50%;
   background: var(--gold-pale);
-  border: 1px solid rgba(184, 150, 90, 0.15);
+  border: 1px solid rgba(201,169,110, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;

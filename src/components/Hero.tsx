@@ -39,13 +39,13 @@ export default function Hero() {
 
   return (
     <section style={{ background: "linear-gradient(165deg,#fff 0%,var(--ow) 50%,var(--gp) 100%)", padding: "120px 0 72px", position: "relative", overflow: "hidden" }}>
-      <div style={{ position: "absolute", top: "-20%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle,rgba(184,150,90,0.06) 0%,transparent 70%)", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", top: "-20%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle,rgba(201,169,110,0.06) 0%,transparent 70%)", pointerEvents: "none" }} />
       <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none" }} viewBox="0 0 900 700" fill="none" preserveAspectRatio="xMidYMid slice">
-        <g opacity="0.055"><path d="M-20 250 L50 200 L120 250 L120 350 L50 400 L-20 350Z" fill="#375253" transform="scale(1.5) translate(-30,10)" /></g>
-        <g opacity="0.035"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#375253" transform="translate(620,40) scale(0.8)" /></g>
-        <g opacity="0.06"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#CCDDDF" transform="translate(700,320) scale(0.45)" /></g>
-        <g opacity="0.04"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#375253" transform="translate(500,420) scale(0.55)" /></g>
-        <g opacity="0.03"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#C3B9AE" transform="translate(150,480) scale(0.6)" /></g>
+        <g opacity="0.055"><path d="M-20 250 L50 200 L120 250 L120 350 L50 400 L-20 350Z" fill="#1C3538" transform="scale(1.5) translate(-30,10)" /></g>
+        <g opacity="0.035"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#1C3538" transform="translate(620,40) scale(0.8)" /></g>
+        <g opacity="0.06"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#E8EDE8" transform="translate(700,320) scale(0.45)" /></g>
+        <g opacity="0.04"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#1C3538" transform="translate(500,420) scale(0.55)" /></g>
+        <g opacity="0.03"><path d="M0 50 L70 0 L140 50 L140 150 L70 200 L0 150Z" fill="#F5F1EB" transform="translate(150,480) scale(0.6)" /></g>
       </svg>
       <div className="mx hf" style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: "clamp(48px,8vw,140px)" }}>
         <div className="hl" style={{ flex: 1, maxWidth: 600 }}>
@@ -58,7 +58,7 @@ export default function Hero() {
             <span ref={typedRef} id="typed" style={{ color: "var(--gd)", fontWeight: 500 }}>extend your healthspan.</span>
             <span className="tw-cursor" />
           </p>
-          <div className="glass-doc" style={{ display: "inline-flex", alignItems: "center", gap: 14, marginBottom: 28, background: "rgba(255,255,255,0.55)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.85)", boxShadow: "0 4px 20px rgba(55,82,83,0.04)", borderRadius: 16, padding: "16px 22px" }}>
+          <div className="glass-doc" style={{ display: "inline-flex", alignItems: "center", gap: 14, marginBottom: 28, background: "rgba(255,255,255,0.55)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.85)", boxShadow: "0 4px 20px rgba(28,53,56,0.04)", borderRadius: 16, padding: "16px 22px" }}>
             <div style={{ width: 1, height: 36, background: "var(--gold)", opacity: 0.4 }} />
             <div>
               <span style={{ fontSize: 15, fontWeight: 600, color: "var(--td)" }}>Dr. Steven Mehta</span>
@@ -72,7 +72,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="hr" style={{ width: "clamp(300px,38%,460px)", flexShrink: 0 }}>
-          <div style={{ position: "relative", width: "100%", aspectRatio: "4/5", borderRadius: 24, overflow: "hidden", background: "linear-gradient(180deg,var(--gl),var(--gp))", border: "1px solid rgba(204,221,223,0.3)" }}>
+          <div style={{ position: "relative", width: "100%", aspectRatio: "4/5", borderRadius: 24, overflow: "hidden", background: "linear-gradient(180deg,var(--gl),var(--gp))", border: "1px solid rgba(232,237,232,0.3)" }}>
             <Image
               src="/ssmehta.jpg"
               alt="Dr. Steven Mehta — Board-Certified Cardiologist & Longevity Physician"
