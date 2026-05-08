@@ -426,7 +426,6 @@ export default function PreventiveCardiologyScottsdale() {
               color: "#fff",
               lineHeight: 1.1,
               marginBottom: 20,
-              whiteSpace: "nowrap",
             }}
           >
             Prevention starts with <span className="fdi" style={{ color: "var(--gold)" }}>understanding your risk.</span>

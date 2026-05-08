@@ -586,7 +586,6 @@ export default function ProgramPage() {
               color: "#fff",
               lineHeight: 1.1,
               marginBottom: 24,
-              whiteSpace: "nowrap",
             }}
           >
             Your health is too important for{" "}

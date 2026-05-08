@@ -48,6 +48,9 @@ h1 .fdi, h2 .fdi, h3 .fdi {
   line-height: 0.95;
 }
 
+/* Page-bottom CTA headlines balance their line breaks for even visual rhythm */
+.page-cta-h2 { text-wrap: balance; }
+
 a { text-decoration: none; color: inherit; }
 
 .btn-gold {

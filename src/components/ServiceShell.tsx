@@ -93,7 +93,6 @@ export function ServiceCTA({
             color: "#fff",
             lineHeight: 1.1,
             marginBottom: 28,
-            whiteSpace: "nowrap",
           }}
         >
           {headline}{" "}

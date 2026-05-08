@@ -323,7 +323,6 @@ export default async function BlogPostPage({
               color: "#fff",
               lineHeight: 1.15,
               marginBottom: 24,
-              whiteSpace: "nowrap",
             }}
           >
             Want this approach for <span className="fdi" style={{ color: "var(--gold)" }}>your own care?</span>

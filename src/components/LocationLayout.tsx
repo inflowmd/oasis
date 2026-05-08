@@ -239,7 +239,6 @@ export default function LocationLayout({
               color: "#fff",
               lineHeight: 1.15,
               marginBottom: 28,
-              whiteSpace: "nowrap",
             }}
           >
             Schedule a <span className="fdi" style={{ color: "var(--gold)" }}>consultation.</span>

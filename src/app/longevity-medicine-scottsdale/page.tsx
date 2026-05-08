@@ -415,7 +415,6 @@ export default function LongevityMedicineScottsdale() {
               color: "#fff",
               lineHeight: 1.1,
               marginBottom: 20,
-              whiteSpace: "nowrap",
             }}
           >
             Ready to take a different <span className="fdi" style={{ color: "var(--gold)" }}>approach?</span>

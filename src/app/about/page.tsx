@@ -518,7 +518,6 @@ export default function AboutPage() {
               color: "#fff",
               lineHeight: 1.1,
               marginBottom: 20,
-              whiteSpace: "nowrap",
             }}
           >
             Ready to work with <span className="fdi" style={{ color: "var(--gold)" }}>Dr. Mehta?</span>
