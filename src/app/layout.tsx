@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Playfair_Display } from "next/font/google";
+import { Outfit, Playfair_Display, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -17,6 +17,14 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-italic",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Oasis Longevity Medicine | Dr. Steven Mehta | Scottsdale, AZ",
   description:
@@ -27,7 +35,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${playfair.variable}`}>
+    <html
+      lang="en"
+      className={`${outfit.variable} ${playfair.variable} ${cormorant.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

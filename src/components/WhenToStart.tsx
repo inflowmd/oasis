@@ -11,7 +11,7 @@ export default function WhenToStart() {
           It&apos;s Never Too Early
         </div>
         <h2 className="fd" style={{ fontSize: "clamp(30px,3vw,46px)", fontWeight: 700, color: "var(--td)", marginBottom: 12 }}>
-          When should <span className="fdi" style={{ color: "var(--gm)" }}>you</span> start?
+          When should <span className="fdi" style={{ color: "var(--gm)", fontSize: "1.25em" }}>you</span> start?
         </h2>
         <p style={{ fontSize: 17, color: "var(--tm)", maxWidth: 440, margin: "0 auto 52px" }}>Optimizing longevity can begin today.</p>
         <div className="g3" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>

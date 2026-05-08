@@ -94,13 +94,13 @@ export default function Story() {
             The Physician
           </div>
           <h2 className="fd" style={{ fontSize: "clamp(30px,3vw,46px)", fontWeight: 700, color: "#fff", lineHeight: 1.1, marginBottom: 16 }}>
-            From treating disease to <span className="fdi" style={{ color: "var(--gold)" }}>preventing it.</span>
+            From treating disease to <span className="fdi" style={{ color: "var(--gold)", fontSize: "1.25em" }}>preventing it.</span>
           </h2>
           <p style={{ fontSize: 16, color: "rgba(232,237,232,0.5)", maxWidth: 500, margin: "0 auto" }}>
             After years of treating advanced cardiovascular disease, Dr. Mehta shifted his focus to what matters most.
           </p>
         </div>
-        <div className="sf" style={{ display: "flex", gap: 60, alignItems: "flex-start", maxWidth: 960, margin: "0 auto" }}>
+        <div className="sf" style={{ display: "flex", gap: 60, alignItems: "flex-start", maxWidth: 1280, margin: "0 auto" }}>
           <div className="sns" style={{ width: 200, flexShrink: 0, position: "sticky", top: 100 }}>
             {stories.map((s, i) => (
               <div

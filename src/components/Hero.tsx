@@ -87,14 +87,14 @@ export default function Hero() {
               <div style={{ width: 3, borderRadius: 3, background: "var(--gd)" }} />
               <div>
                 <div style={{ fontSize: 14, fontWeight: 700, color: "var(--gd)" }}>Double Board-Certified</div>
-                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--tn)", marginTop: 4 }}>Cardiology &amp; Vascular Medicine</div>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--ts)", marginTop: 4 }}>Cardiology &amp; Vascular Medicine</div>
               </div>
             </div>
             <div style={{ display: "flex", alignItems: "stretch", gap: 12 }}>
-              <div style={{ width: 3, borderRadius: 3, background: "var(--tn)" }} />
+              <div style={{ width: 3, borderRadius: 3, background: "var(--gold)" }} />
               <div>
                 <div style={{ fontSize: 14, fontWeight: 700, color: "var(--gd)" }}>Phoenix Top Doc</div>
-                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--tn)", marginTop: 4 }}>Phoenix Magazine</div>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--ts)", marginTop: 4 }}>Phoenix Magazine</div>
               </div>
             </div>
           </div>

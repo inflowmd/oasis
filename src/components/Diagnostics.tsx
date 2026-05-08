@@ -52,7 +52,7 @@ export default function Diagnostics() {
             Diagnostics
           </div>
           <h2 className="fd" style={{ fontSize: "clamp(30px,3vw,46px)", fontWeight: 700, color: "var(--td)", marginBottom: 12 }}>
-            Every protocol begins with <span className="fdi" style={{ color: "var(--gm)" }}>data.</span>
+            Every protocol begins with <span className="fdi" style={{ color: "var(--gm)", fontSize: "1.25em" }}>data.</span>
           </h2>
           <p style={{ fontSize: 16, color: "var(--tm)", maxWidth: 520, margin: "0 auto" }}>
             Fully personalized. No standard panels. Every workup is built around your history, goals, and risk profile — and refined over time.

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 type Modality = { title: string; desc: string; icon: ReactNode };
@@ -63,29 +64,124 @@ const steps = [
 export default function Program() {
   return (
     <section id="program" className="dark-mesh-2" style={{ background: "var(--dark)", paddingTop: 100, paddingBottom: 100, position: "relative", overflow: "hidden" }}>
-      <div className="mx-sm" style={{ position: "relative", zIndex: 1, paddingBottom: 0 }}>
-        <div className="pill" style={{ background: "rgba(201,169,110,0.1)", color: "var(--gold)", border: "1px solid rgba(201,169,110,0.15)", marginBottom: 28 }}>
-          <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--gold)" }} />
-          The Program
-        </div>
-        <h2 className="fd" style={{ fontSize: "clamp(32px,3.2vw,48px)", fontWeight: 700, color: "#fff", lineHeight: 1.12, letterSpacing: "-0.01em", marginBottom: 24, maxWidth: 720 }}>
-          A longevity program <span className="fdi" style={{ color: "var(--gold)" }}>built for the long term.</span>
-        </h2>
-        <p style={{ fontSize: 18, color: "rgba(232,237,232,0.72)", lineHeight: 1.75, maxWidth: 660, marginBottom: 48 }}>
-          Our ongoing annual and follow-up routine diagnostic lifestyle and longevity exam, combined with a supportive, year-round, high-connection communications subscription, creates a personalized physician–patient relationship{" "}
-          <span
+      <div className="mx-lg" style={{ position: "relative", zIndex: 1, paddingBottom: 0 }}>
+        <div
+          className="program-intro-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1.05fr 0.9fr",
+            gap: "clamp(40px,5vw,80px)",
+            alignItems: "center",
+            marginBottom: 64,
+          }}
+        >
+          <div>
+            <div
+              className="pill"
+              style={{
+                background: "rgba(201,169,110,0.1)",
+                color: "var(--gold)",
+                border: "1px solid rgba(201,169,110,0.15)",
+                marginBottom: 28,
+              }}
+            >
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--gold)" }} />
+              The Program
+            </div>
+            <h2
+              className="fd"
+              style={{
+                fontSize: "clamp(32px,3.4vw,52px)",
+                fontWeight: 700,
+                color: "#fff",
+                lineHeight: 1.1,
+                letterSpacing: "-0.01em",
+                marginBottom: 24,
+              }}
+            >
+              A longevity program <span className="fdi" style={{ color: "var(--gold)" }}>built for the long term.</span>
+            </h2>
+            <p style={{ fontSize: 18, color: "rgba(232,237,232,0.72)", lineHeight: 1.8 }}>
+              Our ongoing annual and follow-up routine diagnostic lifestyle and longevity exam, combined with a supportive, year-round, high-connection communications subscription, creates a personalized physician–patient relationship{" "}
+              <span
+                style={{
+                  color: "#fff",
+                  fontWeight: 500,
+                  backgroundImage:
+                    "linear-gradient(transparent 62%, rgba(201,169,110,0.22) 62%, rgba(201,169,110,0.22) 92%, transparent 92%)",
+                  backgroundRepeat: "no-repeat",
+                  padding: "0 2px",
+                }}
+              >
+                designed to optimize your health
+              </span>
+              .
+            </p>
+          </div>
+          <div
+            className="program-intro-image"
             style={{
-              color: "#fff",
-              fontWeight: 500,
-              backgroundImage: "linear-gradient(transparent 62%, rgba(201,169,110,0.22) 62%, rgba(201,169,110,0.22) 92%, transparent 92%)",
-              backgroundRepeat: "no-repeat",
-              padding: "0 2px",
+              position: "relative",
+              width: "100%",
+              aspectRatio: "4/5",
+              borderRadius: 24,
+              overflow: "hidden",
+              border: "1px solid rgba(201,169,110,0.18)",
+              boxShadow: "0 40px 100px rgba(0,0,0,0.45)",
             }}
           >
-            designed to optimize your health
-          </span>
-          .
-        </p>
+            <Image
+              src="/in-depth-review.jpeg"
+              alt="The longevity program — designed around you"
+              fill
+              sizes="(max-width: 1100px) 90vw, 540px"
+              className="object-cover"
+            />
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "linear-gradient(180deg, rgba(15,31,31,0) 40%, rgba(15,31,31,0.75))",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                left: 24,
+                right: 24,
+                bottom: 22,
+                color: "#fff",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: 10,
+                  fontWeight: 700,
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  color: "var(--gold)",
+                  marginBottom: 8,
+                }}
+              >
+                A continuous relationship
+              </p>
+              <p
+                className="fdi"
+                style={{
+                  fontSize: "clamp(18px,1.6vw,22px)",
+                  lineHeight: 1.4,
+                  fontWeight: 500,
+                  color: "rgba(255,255,255,0.95)",
+                }}
+              >
+                Built around your biology, your goals, and your life.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="g3" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 18 }}>
           {steps.map((s) => (
             <div key={s.n} className="cd">
@@ -102,7 +198,7 @@ export default function Program() {
         <div
           className="modality-card"
           style={{
-            maxWidth: 860,
+            maxWidth: 1220,
             margin: "60px auto",
             background: "rgba(245,241,235,0.9)",
             backdropFilter: "blur(20px)",

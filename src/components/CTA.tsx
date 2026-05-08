@@ -19,23 +19,31 @@ export default function CTA() {
         <h2
           className="fd"
           style={{
-            fontSize: "clamp(36px,4.5vw,64px)",
+            fontSize: "clamp(34px,4vw,54px)",
             fontWeight: 700,
             color: "#fff",
             lineHeight: 1.05,
-            marginBottom: 24,
+            letterSpacing: "-0.01em",
+            marginBottom: 28,
+            whiteSpace: "nowrap",
           }}
         >
-          Longevity is not <span className="fdi" style={{ color: "var(--gold)" }}>accidental.</span>
+          Longevity is not{" "}
+          <span
+            className="fdi"
+            style={{ color: "var(--gold)", fontSize: "1.25em", lineHeight: 1 }}
+          >
+            accidental.
+          </span>
         </h2>
 
         <p
           style={{
-            fontSize: 18,
-            color: "rgba(232,237,232,0.5)",
+            fontSize: 19,
+            color: "rgba(232,237,232,0.55)",
             lineHeight: 1.7,
-            maxWidth: 480,
-            margin: "0 auto 48px",
+            maxWidth: 620,
+            margin: "0 auto 52px",
           }}
         >
           Limited enrollment. Applications reviewed by Dr. Mehta personally.
@@ -43,7 +51,7 @@ export default function CTA() {
 
         <div className="cta-btns">
           <a
-            href="#"
+            href="/contact"
             className="btn-gold"
             style={{ padding: "18px 40px", fontSize: 12 }}
           >
