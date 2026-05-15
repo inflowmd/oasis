@@ -31,7 +31,7 @@ export default function Footer() {
               className="btn-gold"
               style={{ marginTop: 20, padding: "12px 24px", fontSize: 11, boxShadow: "none" }}
             >
-              Apply for Access
+              Join Our Practice
             </Link>
           </div>
 

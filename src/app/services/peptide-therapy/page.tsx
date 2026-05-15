@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { ServiceHero, ServiceCTA, SectionTitle } from "@/components/ServiceShell";
+import JoinPrompt from "@/components/JoinPrompt";
 
 export const metadata: Metadata = {
   title: "Peptide Therapy | Physician-Directed | Oasis Longevity Scottsdale",
@@ -117,7 +118,7 @@ export default function PeptideTherapyPage() {
             }}
           >
             <Image
-              src="/in-depth-review.jpeg"
+              src="/physician-consultation-longevity-medicine-scottsdale.jpg"
               alt="Peptide therapy consultation"
               fill
               sizes="(max-width: 900px) 100vw, 560px"
@@ -193,6 +194,8 @@ export default function PeptideTherapyPage() {
           </div>
         </div>
       </section>
+      <JoinPrompt background="var(--ow)" />
+
 
       {/* PHYSICIAN OVERSIGHT */}
       <section style={{ background: "var(--ow)", padding: "120px 0" }}>

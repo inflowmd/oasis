@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { ServiceHero, ServiceCTA, SectionTitle } from "@/components/ServiceShell";
+import JoinPrompt from "@/components/JoinPrompt";
 
 export const metadata: Metadata = {
   title: "Cardiovascular Prevention | Cardiologist-Led | Oasis Longevity Scottsdale",
@@ -107,11 +108,11 @@ export default function CardiovascularPreventionPage() {
             }}
           >
             <Image
-              src="/ssmehta.jpg"
+              src="/active-aging-couple-cycling-cardiovascular-health.jpg"
               alt="Dr. Steven Mehta — interventional cardiologist"
               fill
               sizes="(max-width: 900px) 100vw, 540px"
-              className="object-cover object-top"
+              className="object-cover"
             />
           </div>
         </div>
@@ -158,6 +159,8 @@ export default function CardiovascularPreventionPage() {
           ))}
         </div>
       </section>
+      <JoinPrompt background="var(--ow)" />
+
 
       {/* WHO BENEFITS */}
       <section style={{ background: "var(--ow)", padding: "120px 0" }}>

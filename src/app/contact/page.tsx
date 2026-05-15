@@ -6,9 +6,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ApplicationForm from "@/components/ApplicationForm";
 
 export const metadata: Metadata = {
-  title: "Apply for Access | Oasis Longevity Medicine",
+  title: "Join Our Practice | Oasis Longevity Medicine",
   description:
-    "Begin your longevity assessment with Dr. Steven Mehta. Limited enrollment — every application is reviewed personally. Scottsdale & Prescott, Arizona.",
+    "Inquire about joining Dr. Steven Mehta's longevity practice. Limited enrollment — every inquiry is reviewed personally. Scottsdale & Prescott, Arizona.",
   alternates: { canonical: "/contact" },
 };
 
@@ -37,7 +37,7 @@ export default function ContactPage() {
               marginBottom: 16,
             }}
           >
-            Apply for Access
+            New Patient Inquiries
           </p>
           <h1
             className="fd"
@@ -50,10 +50,10 @@ export default function ContactPage() {
               marginBottom: 20,
             }}
           >
-            Start your longevity <span className="fdi" style={{ color: "var(--gm)" }}>assessment.</span>
+            Join our <span className="fdi" style={{ color: "var(--gm)" }}>practice.</span>
           </h1>
           <p style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.7, maxWidth: 560, margin: "0 auto" }}>
-            Limited enrollment. Every application is reviewed by Dr. Mehta personally.
+            Limited enrollment. Every inquiry is reviewed by Dr. Mehta personally.
           </p>
         </div>
       </section>

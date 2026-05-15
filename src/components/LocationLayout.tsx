@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import Navbar from "./Navbar";
@@ -34,12 +35,33 @@ export default function LocationLayout({
       {/* HERO */}
       <section
         style={{
-          background: "linear-gradient(165deg, var(--ow) 0%, var(--tl) 100%)",
+          position: "relative",
           padding: "180px 0 60px",
+          overflow: "hidden",
+          background: "var(--dark)",
         }}
       >
-        <div className="mx-lg" style={{ maxWidth: 1240 }}>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "#" }, { label: city }]} />
+        <Image
+          src="/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg"
+          alt={`${city} Arizona — active longevity lifestyle in the desert`}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          style={{ opacity: 0.45, zIndex: 0 }}
+        />
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(15,31,31,0.55) 0%, rgba(15,31,31,0.7) 100%)",
+            zIndex: 0,
+          }}
+        />
+        <div className="mx-lg" style={{ maxWidth: 1240, position: "relative", zIndex: 1 }}>
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "#" }, { label: city }]} dark />
           <p
             style={{
               fontSize: 12,
@@ -58,16 +80,16 @@ export default function LocationLayout({
             style={{
               fontSize: "clamp(36px,4.4vw,60px)",
               fontWeight: 700,
-              color: "var(--td)",
+              color: "#fff",
               lineHeight: 1.05,
               letterSpacing: "-0.01em",
               marginBottom: 22,
               maxWidth: 760,
             }}
           >
-            {city} <span className="fdi" style={{ color: "var(--gm)" }}>Office</span>
+            {city} <span className="fdi" style={{ color: "var(--gold)" }}>Office</span>
           </h1>
-          <p style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.7, maxWidth: 720 }}>{intro}</p>
+          <p style={{ fontSize: 18, color: "rgba(232,237,232,0.75)", lineHeight: 1.7, maxWidth: 720 }}>{intro}</p>
         </div>
       </section>
 
@@ -244,7 +266,7 @@ export default function LocationLayout({
             Schedule a <span className="fdi" style={{ color: "var(--gold)" }}>consultation.</span>
           </h2>
           <Link href="/contact" className="btn-gold" style={{ padding: "18px 40px", fontSize: 12 }}>
-            Apply for Access
+            Join Our Practice
           </Link>
         </div>
       </section>

@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { ServiceHero, ServiceCTA, SectionTitle } from "@/components/ServiceShell";
+import JoinPrompt from "@/components/JoinPrompt";
 
 export const metadata: Metadata = {
   title: "Hormone Optimization in Scottsdale | Cardiologist-Led | Oasis Longevity",
@@ -104,7 +105,7 @@ export default function HormoneOptimizationPage() {
             }}
           >
             <Image
-              src="/in-depth-review.jpeg"
+              src="/physician-consultation-longevity-medicine-scottsdale.jpg"
               alt="Hormone optimization consultation"
               fill
               sizes="(max-width: 900px) 100vw, 540px"
@@ -158,6 +159,8 @@ export default function HormoneOptimizationPage() {
           </div>
         </div>
       </section>
+      <JoinPrompt background="var(--ow)" />
+
 
       {/* WHO BENEFITS */}
       <section style={{ background: "var(--ow)", padding: "120px 0" }}>

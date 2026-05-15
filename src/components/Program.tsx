@@ -283,16 +283,68 @@ export default function Program() {
             Integrating the right modalities for each client.
           </p>
         </div>
-        <div className="cd" style={{ display: "flex", gap: 18, alignItems: "flex-start", padding: "24px 28px" }}>
-          <div style={{ width: 36, height: 36, borderRadius: 10, background: "rgba(201,169,110,0.1)", border: "1px solid rgba(201,169,110,0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#C9A96E" />
+        <div
+          style={{
+            display: "flex",
+            gap: 22,
+            alignItems: "flex-start",
+            padding: "34px 38px",
+            borderRadius: 18,
+            background: "rgba(201,169,110,0.08)",
+            border: "1px solid rgba(201,169,110,0.4)",
+            boxShadow: "0 24px 60px rgba(0,0,0,0.25)",
+          }}
+        >
+          <div
+            style={{
+              width: 46,
+              height: 46,
+              borderRadius: 12,
+              background: "rgba(201,169,110,0.16)",
+              border: "1px solid rgba(201,169,110,0.35)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexShrink: 0,
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+                fill="#C9A96E"
+              />
             </svg>
           </div>
           <div>
-            <h4 style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 6 }}>Qualified Medical Expenses</h4>
-            <p style={{ color: "rgba(232,237,232,0.5)", fontSize: 14, lineHeight: 1.65 }}>
-              Program fees are 100% outside of and exceed standard plan coverage — eligible for HSA, HRA, FSA, and MSA funding.
+            <h4
+              style={{
+                color: "var(--gold)",
+                fontWeight: 700,
+                fontSize: 12,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                marginBottom: 12,
+              }}
+            >
+              Qualified Medical Expense
+            </h4>
+            <p
+              className="fd"
+              style={{
+                color: "#fff",
+                fontSize: "clamp(17px,1.7vw,21px)",
+                lineHeight: 1.6,
+                fontWeight: 500,
+                marginBottom: 14,
+              }}
+            >
+              Cash patient annual subscription fees, payable annually or monthly, purchase annual comprehensive
+              diagnostic and unlimited follow-up exams, supported by ongoing communication connection to your
+              healthcare professional, to optimize your health.
+            </p>
+            <p style={{ color: "rgba(232,237,232,0.55)", fontSize: 14, lineHeight: 1.65 }}>
+              Program fees are 100% outside of and exceed standard plan coverage — eligible for HSA, HRA, FSA, and MSA
+              funding.
             </p>
           </div>
         </div>

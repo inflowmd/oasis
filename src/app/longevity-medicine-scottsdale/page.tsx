@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JoinPrompt from "@/components/JoinPrompt";
 
 export const metadata: Metadata = {
   title: "Longevity Medicine in Scottsdale | Cardiologist-Led | Oasis Longevity",
@@ -175,6 +176,8 @@ export default function LongevityMedicineScottsdale() {
           </div>
         </div>
       </section>
+      <JoinPrompt background="var(--tl)" />
+
 
       {/* FULL-BLEED BREAK */}
       <section
@@ -327,72 +330,101 @@ export default function LongevityMedicineScottsdale() {
 
       {/* WHO SEEKS IT */}
       <section style={{ background: "var(--tl)", padding: "100px 0" }}>
-        <div className="mx-sm" style={{ maxWidth: 1160 }}>
-          <p
+        <div
+          className="mx-lg phil-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1.05fr",
+            gap: "clamp(40px,5vw,72px)",
+            alignItems: "center",
+          }}
+        >
+          <div
             style={{
-              fontSize: 12,
-              fontWeight: 700,
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "var(--gold)",
-              marginBottom: 16,
+              position: "relative",
+              width: "100%",
+              aspectRatio: "4/5",
+              borderRadius: 24,
+              overflow: "hidden",
+              border: "1px solid rgba(232,237,232,0.5)",
+              boxShadow: "0 30px 70px rgba(28,53,56,0.1)",
             }}
           >
-            Who Seeks It
-          </p>
-          <h2
-            className="fd"
-            style={{
-              fontSize: "clamp(28px,3vw,42px)",
-              fontWeight: 700,
-              color: "var(--td)",
-              lineHeight: 1.15,
-              marginBottom: 36,
-            }}
-          >
-            The patients drawn to <span className="fdi" style={{ color: "var(--gm)" }}>this approach.</span>
-          </h2>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 18 }}>
-            {[
-              {
-                t: "High-performing professionals.",
-                d: "Executives who need sustained cognitive and physical output across a long career, and who are uninterested in waiting for symptoms to appear.",
-              },
-              {
-                t: "Engaged parents.",
-                d: "Mothers and fathers who want to be active and present for the long arc of their children's lives, not just a few healthy years.",
-              },
-              {
-                t: "Family-history-aware patients.",
-                d: "Anyone with a meaningful family history of heart disease, cancer, or neurodegenerative disease who wants to change their trajectory rather than wait to confirm it.",
-              },
-              {
-                t: "&ldquo;Fine&rdquo; isn't enough.",
-                d: "People who feel fine by conventional standards but understand that fine isn't optimal — and want their care held to a higher bar.",
-              },
-              {
-                t: "Disenchanted with conventional care.",
-                d: "Patients who have been through the standard system and felt unseen, unheard, or undertested — and want a relationship with a physician again.",
-              },
-            ].map((row) => (
-              <li
-                key={row.t}
-                style={{
-                  background: "#fff",
-                  border: "1px solid rgba(232,237,232,0.6)",
-                  borderRadius: 16,
-                  padding: "20px 24px",
-                }}
-              >
-                <h3
-                  className="fd"
-                  style={{ fontSize: 19, fontWeight: 700, color: "var(--td)", marginBottom: 6 }}
-                  dangerouslySetInnerHTML={{ __html: row.t }}
-                />
-                <p style={{ fontSize: 15, color: "var(--tm)", lineHeight: 1.65 }}>{row.d}</p>
-              </li>
-            ))}
-          </ul>
+            <Image
+              src="/healthy-man-running-fitness-healthspan-optimization.jpg"
+              alt="Active man running — healthspan optimization through fitness"
+              fill
+              sizes="(max-width: 900px) 100vw, 540px"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p
+              style={{
+                fontSize: 12,
+                fontWeight: 700,
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                color: "var(--gold)",
+                marginBottom: 16,
+              }}
+            >
+              Who Seeks It
+            </p>
+            <h2
+              className="fd"
+              style={{
+                fontSize: "clamp(28px,3vw,42px)",
+                fontWeight: 700,
+                color: "var(--td)",
+                lineHeight: 1.15,
+                marginBottom: 36,
+              }}
+            >
+              The patients drawn to <span className="fdi" style={{ color: "var(--gm)" }}>this approach.</span>
+            </h2>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 18 }}>
+              {[
+                {
+                  t: "High-performing professionals.",
+                  d: "Executives who need sustained cognitive and physical output across a long career, and who are uninterested in waiting for symptoms to appear.",
+                },
+                {
+                  t: "Engaged parents.",
+                  d: "Mothers and fathers who want to be active and present for the long arc of their children's lives, not just a few healthy years.",
+                },
+                {
+                  t: "Family-history-aware patients.",
+                  d: "Anyone with a meaningful family history of heart disease, cancer, or neurodegenerative disease who wants to change their trajectory rather than wait to confirm it.",
+                },
+                {
+                  t: "&ldquo;Fine&rdquo; isn't enough.",
+                  d: "People who feel fine by conventional standards but understand that fine isn't optimal — and want their care held to a higher bar.",
+                },
+                {
+                  t: "Disenchanted with conventional care.",
+                  d: "Patients who have been through the standard system and felt unseen, unheard, or undertested — and want a relationship with a physician again.",
+                },
+              ].map((row) => (
+                <li
+                  key={row.t}
+                  style={{
+                    background: "#fff",
+                    border: "1px solid rgba(232,237,232,0.6)",
+                    borderRadius: 16,
+                    padding: "20px 24px",
+                  }}
+                >
+                  <h3
+                    className="fd"
+                    style={{ fontSize: 19, fontWeight: 700, color: "var(--td)", marginBottom: 6 }}
+                    dangerouslySetInnerHTML={{ __html: row.t }}
+                  />
+                  <p style={{ fontSize: 15, color: "var(--tm)", lineHeight: 1.65 }}>{row.d}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -452,7 +484,7 @@ export default function LongevityMedicineScottsdale() {
                 borderRadius: 999,
               }}
             >
-              Apply for Access
+              Join Our Practice
             </Link>
           </div>
         </div>

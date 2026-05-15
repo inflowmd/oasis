@@ -49,6 +49,8 @@ const DARK_HERO_PATHS = [
   "/services/epigenetic-evaluation",
   "/services/cardiovascular-prevention",
   "/services/peptide-therapy",
+  "/locations/scottsdale",
+  "/locations/prescott",
 ];
 
 export default function Navbar() {
@@ -237,7 +239,7 @@ export default function Navbar() {
             className="btn-gold"
             style={{ padding: "11px 24px", fontSize: 10, boxShadow: "none" }}
           >
-            Apply for Access
+            Join Our Practice
           </Link>
         </div>
 
@@ -408,7 +410,7 @@ export default function Navbar() {
             boxShadow: "none",
           }}
         >
-          Apply for Access
+          Join Our Practice
         </Link>
       </div>
     </nav>

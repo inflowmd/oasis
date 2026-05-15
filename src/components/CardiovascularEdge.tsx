@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stats = [
   { v: "919K+", l: "CVD deaths in 2023", gold: true },
   { v: "80%", l: "Preventable", gold: true },
@@ -29,9 +31,29 @@ export default function CardiovascularEdge() {
             Heart disease is the #1 killer.<br />
             <span className="fdi" style={{ color: "var(--gm)" }}>Your longevity doctor should know that.</span>
           </h2>
-          <p style={{ fontSize: 16, color: "var(--tm)", lineHeight: 1.75, marginBottom: 32, maxWidth: 500 }}>
+          <p style={{ fontSize: 16, color: "var(--tm)", lineHeight: 1.75, marginBottom: 28, maxWidth: 500 }}>
             Most longevity practices are led by naturopaths or functional medicine practitioners. Dr. Mehta brings decades of interventional cardiology training and first-hand experience treating the disease longevity medicine exists to prevent.
           </p>
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              aspectRatio: "5/3",
+              borderRadius: 24,
+              overflow: "hidden",
+              border: "1px solid rgba(232,237,232,0.5)",
+              boxShadow: "0 30px 70px rgba(28,53,56,0.1)",
+              marginBottom: 28,
+            }}
+          >
+            <Image
+              src="/physician-consultation-longevity-medicine-scottsdale.jpg"
+              alt="Physician consultation in a Scottsdale longevity medicine practice"
+              fill
+              sizes="(max-width: 900px) 100vw, 600px"
+              className="object-cover"
+            />
+          </div>
           <div className="g2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
             {stats.map((s) => (
               <div key={s.v} style={{ display: "flex", gap: 14 }}>

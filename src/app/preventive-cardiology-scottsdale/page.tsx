@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JoinPrompt from "@/components/JoinPrompt";
 
 export const metadata: Metadata = {
   title: "Preventive Cardiology in Scottsdale | Cardiologist-Led | Oasis Longevity",
@@ -120,8 +121,8 @@ export default function PreventiveCardiologyScottsdale() {
         }}
       >
         <Image
-          src="/application-discovery.jpeg"
-          alt="Cardiovascular assessment in clinical practice"
+          src="/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg"
+          alt="Active couple hiking the Arizona desert — preventive cardiology in lifestyle"
           fill
           sizes="100vw"
           className="object-cover"
@@ -270,6 +271,8 @@ export default function PreventiveCardiologyScottsdale() {
           ))}
         </div>
       </section>
+      <JoinPrompt background="var(--tl)" />
+
 
       {/* CARDIOLOGIST'S ADVANTAGE */}
       <section
@@ -444,7 +447,7 @@ export default function PreventiveCardiologyScottsdale() {
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact" className="btn-gold" style={{ padding: "18px 40px", fontSize: 12 }}>
-              Apply for Access
+              Join Our Practice
             </Link>
             <a
               href="tel:4807207044"

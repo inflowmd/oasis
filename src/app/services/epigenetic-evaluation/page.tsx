@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { ServiceHero, ServiceCTA, SectionTitle } from "@/components/ServiceShell";
+import JoinPrompt from "@/components/JoinPrompt";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
@@ -161,6 +162,8 @@ export default function EpigeneticEvaluationPage() {
           </div>
         </div>
       </section>
+      <JoinPrompt background="var(--ow)" />
+
 
       {/* HOW IT WORKS */}
       <section style={{ background: "var(--ow)", padding: "120px 0" }}>
@@ -201,7 +204,7 @@ export default function EpigeneticEvaluationPage() {
             }}
           >
             <Image
-              src="/partnership.jpeg"
+              src="/doctor-patient-conversation-preventive-cardiology.jpg"
               alt="Epigenetic evaluation review"
               fill
               sizes="(max-width: 900px) 100vw, 560px"

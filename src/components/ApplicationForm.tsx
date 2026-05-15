@@ -123,7 +123,7 @@ export default function ApplicationForm() {
         className="btn-gold"
         style={{ marginTop: 28, padding: "16px 32px", fontSize: 12, width: "100%", justifyContent: "center" }}
       >
-        Submit Application
+        Request to Join
       </button>
 
       <p

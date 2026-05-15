@@ -1,8 +1,24 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { categories, posts } from "@/lib/blog";
+
+const POST_IMAGES: Record<string, { src: string; alt: string }> = {
+  "why-your-longevity-doctor-should-be-a-cardiologist": {
+    src: "/multigenerational-family-active-lifestyle-longevity.jpg",
+    alt: "Multigenerational family enjoying an active lifestyle — longevity across generations",
+  },
+  "what-your-coronary-calcium-score-actually-means": {
+    src: "/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg",
+    alt: "Active couple hiking the Arizona desert — cardiovascular health and longevity",
+  },
+  "apob-vs-ldl-what-cardiologists-actually-measure": {
+    src: "/doctor-patient-conversation-preventive-cardiology.jpg",
+    alt: "Doctor-patient conversation on advanced lipid markers and preventive cardiology",
+  },
+};
 
 export default function BlogIndexClient() {
   const [active, setActive] = useState<(typeof categories)[number]>("All");
@@ -51,7 +67,9 @@ export default function BlogIndexClient() {
         className="g3 blog-grid"
         style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 28 }}
       >
-        {visible.map((p) => (
+        {visible.map((p) => {
+          const cover = POST_IMAGES[p.slug];
+          return (
           <Link
             key={p.slug}
             href={`/blog/${p.slug}`}
@@ -65,23 +83,33 @@ export default function BlogIndexClient() {
                 position: "relative",
               }}
             >
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  opacity: 0.35,
-                }}
-              >
-                <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
-                    fill="#1C3538"
-                  />
-                </svg>
-              </div>
+              {cover ? (
+                <Image
+                  src={cover.src}
+                  alt={cover.alt}
+                  fill
+                  sizes="(max-width: 900px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              ) : (
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    opacity: 0.35,
+                  }}
+                >
+                  <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                      fill="#1C3538"
+                    />
+                  </svg>
+                </div>
+              )}
             </div>
             <div style={{ padding: "22px 24px 24px", display: "flex", flexDirection: "column", flex: 1 }}>
               <span
@@ -134,7 +162,8 @@ export default function BlogIndexClient() {
               </div>
             </div>
           </Link>
-        ))}
+          );
+        })}
       </div>
     </>
   );

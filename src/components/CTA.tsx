@@ -55,7 +55,7 @@ export default function CTA() {
             className="btn-gold"
             style={{ padding: "18px 40px", fontSize: 12 }}
           >
-            Apply for the Longevity Program
+            Join Our Practice
           </a>
           <a
             href="tel:4807207044"

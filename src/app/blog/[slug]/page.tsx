@@ -328,7 +328,7 @@ export default async function BlogPostPage({
             Want this approach for <span className="fdi" style={{ color: "var(--gold)" }}>your own care?</span>
           </h2>
           <Link href="/contact" className="btn-gold" style={{ padding: "16px 32px", fontSize: 12 }}>
-            Apply for Access
+            Join Our Practice
           </Link>
         </div>
       </section>

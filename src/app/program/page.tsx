@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
+import JoinPrompt from "@/components/JoinPrompt";
 
 export const metadata: Metadata = {
   title: "The Oasis Longevity Program | Dr. Steven Mehta | Scottsdale",
@@ -17,7 +18,7 @@ const phases = [
   {
     n: "01",
     title: "Discovery",
-    image: "/application-discovery.jpeg",
+    image: "/physician-consultation-longevity-medicine-scottsdale.jpg",
     body: [
       "Your first conversation with Dr. Mehta isn't a checklist. It's an exploration — of your history, your family's health patterns, your goals, your fears, what you've tried, what's worked, and what hasn't. He's listening for the story your data will tell.",
       "The diagnostic workup is built around you — not a standard panel applied to everyone. Dr. Mehta evaluates your health on a cardiovascular, metabolic, hormonal, and cellular level, selecting the specific assessments that matter for your individual risk profile and goals. No two clients receive identical workups, because no two clients arrive with identical biology.",
@@ -26,7 +27,7 @@ const phases = [
   {
     n: "02",
     title: "Your Blueprint",
-    image: "/in-depth-review.jpeg",
+    image: "/doctor-patient-conversation-preventive-cardiology.jpg",
     body: [
       "When your results are in, Dr. Mehta doesn't hand you a printout and send you home. He synthesizes dozens of data points into a clear, actionable picture of where your health stands today — and where it's heading.",
       "The review session is unhurried and thorough. Every finding is explained. Every question is answered. Every recommendation is grounded in your specific data, not generic guidelines. The result is a personalized protocol — your longevity blueprint — designed around the intersection of your biology, your goals, and the best available evidence.",
@@ -36,7 +37,7 @@ const phases = [
   {
     n: "03",
     title: "Implementation & Calibration",
-    image: "/partnership.jpeg",
+    image: "/active-aging-couple-cycling-cardiovascular-health.jpg",
     body: [
       "Your protocol isn't static. As your body responds — and as new data comes in — Dr. Mehta adjusts course. Early follow-ups are closer together, then settle into a rhythm as your trajectory becomes clear.",
       "This is where the breadth of Dr. Mehta's clinical expertise matters. The protocol may draw on hormonal optimization, peptide therapy, regenerative science, metabolic interventions, or advanced cardiovascular prevention — whatever your biology calls for. The specific modalities are determined by your data, not by a menu.",
@@ -285,6 +286,8 @@ export default function ProgramPage() {
           ))}
         </div>
       </section>
+      <JoinPrompt background="var(--tl)" />
+
 
       {/* FULL-BLEED IMAGE BREAK */}
       <section
@@ -528,6 +531,55 @@ export default function ProgramPage() {
           >
             A qualified medical expense.
           </h2>
+          <div
+            style={{
+              maxWidth: 880,
+              margin: "0 auto 28px",
+              padding: "30px 36px",
+              borderRadius: 18,
+              background: "#fff",
+              border: "1px solid rgba(201,169,110,0.4)",
+              boxShadow: "0 24px 60px rgba(28,53,56,0.08)",
+              display: "flex",
+              gap: 20,
+              alignItems: "flex-start",
+              textAlign: "left",
+            }}
+          >
+            <div
+              style={{
+                width: 44,
+                height: 44,
+                borderRadius: 12,
+                background: "var(--gold-pale)",
+                border: "1px solid rgba(201,169,110,0.3)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+                  fill="#C9A96E"
+                />
+              </svg>
+            </div>
+            <p
+              className="fd"
+              style={{
+                fontSize: "clamp(17px,1.7vw,21px)",
+                color: "var(--gd)",
+                lineHeight: 1.6,
+                fontWeight: 500,
+              }}
+            >
+              Cash patient annual subscription fees, payable annually or monthly, purchase annual comprehensive
+              diagnostic and unlimited follow-up exams, supported by ongoing communication connection to your
+              healthcare professional, to optimize your health.
+            </p>
+          </div>
           <p style={{ fontSize: 17, color: "var(--tm)", lineHeight: 1.85, marginBottom: 18 }}>
             The program is structured as a qualified medical expense — eligible for funding through employer health
             plans, self-employed health deductions, HSA, HRA, FSA, and MSA accounts. Program fees are 100% outside of
@@ -606,7 +658,7 @@ export default function ProgramPage() {
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact" className="btn-gold" style={{ padding: "18px 40px", fontSize: 12 }}>
-              Apply for Access
+              Join Our Practice
             </Link>
             <a
               href="tel:4807207044"

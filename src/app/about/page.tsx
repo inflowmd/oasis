@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JoinPrompt from "@/components/JoinPrompt";
 
 export const metadata: Metadata = {
   title: "About Dr. Steven Mehta | Cardiologist & Longevity Physician | Scottsdale",
@@ -149,7 +150,7 @@ export default function AboutPage() {
 
           <StoryRow
             reverse
-            image="/application-discovery.jpeg"
+            image="/doctor-patient-conversation-preventive-cardiology.jpg"
             heading={
               <>
                 The path to the <span className="fdi" style={{ color: "var(--gm)" }}>cath lab.</span>
@@ -248,7 +249,7 @@ export default function AboutPage() {
           />
 
           <StoryRow
-            image="/partnership.jpeg"
+            image="/doctor-patient-conversation-preventive-cardiology.jpg"
             heading={
               <>
                 What he <span className="fdi" style={{ color: "var(--gm)" }}>built.</span>
@@ -261,6 +262,8 @@ export default function AboutPage() {
           />
         </div>
       </section>
+      <JoinPrompt background="var(--ow)" />
+
 
       {/* PHILOSOPHY */}
       <section style={{ background: "var(--ow)", padding: "120px 0" }}>
@@ -446,8 +449,8 @@ export default function AboutPage() {
             }}
           >
             <Image
-              src="/in-depth-review.jpeg"
-              alt="Beyond medicine — a personal life"
+              src="/healthy-man-running-fitness-healthspan-optimization.jpg"
+              alt="Healthy man running — fitness as healthspan optimization"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
               className="object-cover"
@@ -537,7 +540,7 @@ export default function AboutPage() {
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact" className="btn-gold" style={{ padding: "18px 40px", fontSize: 12 }}>
-              Apply for Access
+              Join Our Practice
             </Link>
             <a
               href="tel:4807207044"

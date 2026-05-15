@@ -67,7 +67,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="mob-hide hero-btns" style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-            <a href="#apply" className="btn-gold">Apply for Access</a>
+            <a href="#apply" className="btn-gold">Join Our Practice</a>
             <a href="#story" className="btn-outline">Dr. Mehta&apos;s Story</a>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="mob-show hero-btns" style={{ display: "none", alignItems: "center", gap: 16, flexWrap: "wrap", marginTop: 24, justifyContent: "center" }}>
-            <a href="#apply" className="btn-gold">Apply for Access</a>
+            <a href="#apply" className="btn-gold">Join Our Practice</a>
             <a href="#story" className="btn-outline">Dr. Mehta&apos;s Story</a>
           </div>
         </div>

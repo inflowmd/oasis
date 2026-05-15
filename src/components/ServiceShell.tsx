@@ -116,7 +116,7 @@ export function ServiceCTA({
         </p>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/contact" className="btn-gold" style={{ padding: "18px 40px", fontSize: 12 }}>
-            Apply for Access
+            Join Our Practice
           </Link>
           <a
             href="tel:4807207044"
