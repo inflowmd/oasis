@@ -28,6 +28,25 @@ export default function PreventiveCardiologyScottsdale() {
           overflow: "hidden",
         }}
       >
+        <Image
+          src="/heart-monitoring-preventive-cardiology-scottsdale.webp"
+          alt="Preventive cardiology heart monitoring Scottsdale"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          style={{ opacity: 0.28, zIndex: 0 }}
+        />
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(15,31,31,0.6) 0%, rgba(28,53,56,0.78) 100%)",
+            zIndex: 0,
+          }}
+        />
         <div className="mx-lg" style={{ position: "relative", zIndex: 1, maxWidth: 1240 }}>
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Our Approach", href: "#" }, { label: "Preventive Cardiology" }]} dark />
           <p
@@ -121,8 +140,8 @@ export default function PreventiveCardiologyScottsdale() {
         }}
       >
         <Image
-          src="/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg"
-          alt="Active couple hiking the Arizona desert — preventive cardiology in lifestyle"
+          src="/cardiovascular-assessment-preventive-cardiology-exam.webp"
+          alt="Cardiovascular assessment preventive cardiology exam"
           fill
           sizes="100vw"
           className="object-cover"
@@ -284,7 +303,18 @@ export default function PreventiveCardiologyScottsdale() {
           overflow: "hidden",
         }}
       >
-        <div className="mx-sm" style={{ position: "relative", zIndex: 1, maxWidth: 1180 }}>
+        <div
+          className="mx-lg phil-grid"
+          style={{
+            position: "relative",
+            zIndex: 1,
+            display: "grid",
+            gridTemplateColumns: "1.15fr 0.85fr",
+            gap: "clamp(40px,5vw,80px)",
+            alignItems: "center",
+          }}
+        >
+          <div>
           <p
             style={{
               fontSize: 12,
@@ -333,6 +363,25 @@ export default function PreventiveCardiologyScottsdale() {
               numbers. When an interventional cardiologist orders the same panel, he sees the arterial wall. The same
               data, interpreted through a fundamentally different clinical lens.
             </p>
+          </div>
+          </div>
+          <div
+            style={{
+              position: "relative",
+              aspectRatio: "4/5",
+              borderRadius: 22,
+              overflow: "hidden",
+              border: "1px solid rgba(201,169,110,0.2)",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.4)",
+            }}
+          >
+            <Image
+              src="/cardiovascular-heart-health-longevity-medicine.webp"
+              alt="Cardiovascular heart health longevity medicine"
+              fill
+              sizes="(max-width: 900px) 100vw, 460px"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

@@ -91,8 +91,8 @@ export default function LongevityMedicineScottsdale() {
               }}
             >
               <Image
-                src="/in-depth-review.jpeg"
-                alt="Longevity medicine consultation"
+                src="/advanced-diagnostics-longevity-medicine-technology.webp"
+                alt="Advanced longevity medicine diagnostics Scottsdale"
                 fill
                 sizes="(max-width: 900px) 100vw, 480px"
                 priority
@@ -351,8 +351,8 @@ export default function LongevityMedicineScottsdale() {
             }}
           >
             <Image
-              src="/healthy-man-running-fitness-healthspan-optimization.jpg"
-              alt="Active man running — healthspan optimization through fitness"
+              src="/dr-mehta-longevity-consultation-scottsdale.webp"
+              alt="Longevity medicine consultation Scottsdale Arizona"
               fill
               sizes="(max-width: 900px) 100vw, 540px"
               className="object-cover"

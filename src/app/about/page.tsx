@@ -163,7 +163,8 @@ export default function AboutPage() {
           />
 
           <StoryRow
-            image="/in-depth-review.jpeg"
+            image="/physician-reviewing-patient-data-longevity-program.webp"
+            imageAlt="Physician reviewing patient health data longevity program"
             heading={
               <>
                 A career on the <span className="fdi" style={{ color: "var(--gm)" }}>front line.</span>
@@ -324,6 +325,31 @@ export default function AboutPage() {
             </Belief>
           </div>
         </div>
+      </section>
+
+      {/* IMAGE BREAK — preventive cardiology assessment */}
+      <section
+        style={{
+          position: "relative",
+          height: "clamp(280px,38vw,460px)",
+          overflow: "hidden",
+        }}
+      >
+        <Image
+          src="/cardiovascular-assessment-preventive-cardiology-exam.webp"
+          alt="Preventive cardiology cardiovascular assessment"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(180deg, rgba(15,31,31,0.25), rgba(15,31,31,0.4))",
+          }}
+        />
       </section>
 
       {/* TIMELINE */}
@@ -572,6 +598,7 @@ export default function AboutPage() {
 
 function StoryRow({
   image,
+  imageAlt = "",
   heading,
   paragraphs,
   pull,
@@ -579,6 +606,7 @@ function StoryRow({
   objectPosition = "center",
 }: {
   image: string;
+  imageAlt?: string;
   heading: React.ReactNode;
   paragraphs: string[];
   pull?: string;
@@ -609,7 +637,7 @@ function StoryRow({
       >
         <Image
           src={image}
-          alt=""
+          alt={imageAlt}
           fill
           sizes="(max-width: 900px) 100vw, 540px"
           className="object-cover"

@@ -12,6 +12,8 @@ export default function ScottsdalePage() {
   return (
     <LocationLayout
       city="Scottsdale"
+      heroImage="/advanced-diagnostics-longevity-medicine-technology.webp"
+      heroImageAlt="Longevity medicine technology Scottsdale office"
       intro="The Scottsdale office is the home of Dr. Mehta's longevity practice — a quiet, considered environment built for the kind of unhurried conversations the work requires."
       address={{ line1: "7659 E. Pinnacle Peak Rd, Suite 110", line2: "Scottsdale, AZ 85255" }}
       hours={[

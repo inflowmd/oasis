@@ -105,8 +105,8 @@ export default function HormoneOptimizationPage() {
             }}
           >
             <Image
-              src="/physician-consultation-longevity-medicine-scottsdale.jpg"
-              alt="Hormone optimization consultation"
+              src="/dr-mehta-longevity-consultation-scottsdale.webp"
+              alt="Hormone optimization consultation with cardiologist Scottsdale"
               fill
               sizes="(max-width: 900px) 100vw, 540px"
               className="object-cover"

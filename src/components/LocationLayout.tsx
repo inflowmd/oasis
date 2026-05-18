@@ -14,6 +14,8 @@ type Props = {
   serving: string;
   neighborhoods: string[];
   mapEmbedSrc?: string; // optional Google Maps embed URL
+  heroImage?: string;
+  heroImageAlt?: string;
   extra?: ReactNode;
 };
 
@@ -26,6 +28,8 @@ export default function LocationLayout({
   serving,
   neighborhoods,
   mapEmbedSrc,
+  heroImage = "/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg",
+  heroImageAlt,
   extra,
 }: Props) {
   return (
@@ -42,8 +46,8 @@ export default function LocationLayout({
         }}
       >
         <Image
-          src="/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg"
-          alt={`${city} Arizona — active longevity lifestyle in the desert`}
+          src={heroImage}
+          alt={heroImageAlt ?? `${city} Arizona — active longevity lifestyle in the desert`}
           fill
           priority
           sizes="100vw"

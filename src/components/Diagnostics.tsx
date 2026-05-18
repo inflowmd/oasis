@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 type Card = { title: string; icon: ReactNode; body: string };
@@ -57,6 +58,26 @@ export default function Diagnostics() {
           <p style={{ fontSize: 16, color: "var(--tm)", maxWidth: 520, margin: "0 auto" }}>
             Fully personalized. No standard panels. Every workup is built around your history, goals, and risk profile — and refined over time.
           </p>
+        </div>
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "21/8",
+            borderRadius: 24,
+            overflow: "hidden",
+            border: "1px solid rgba(28,53,56,0.08)",
+            boxShadow: "0 30px 70px rgba(28,53,56,0.1)",
+            marginBottom: 36,
+          }}
+        >
+          <Image
+            src="/advanced-diagnostics-longevity-medicine-technology.webp"
+            alt="Advanced diagnostic technology longevity medicine Scottsdale"
+            fill
+            sizes="(max-width: 1280px) 100vw, 1200px"
+            className="object-cover"
+          />
         </div>
         <div className="g3" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 18 }}>
           {cards.map((c) => (

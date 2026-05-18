@@ -118,8 +118,8 @@ export default function PeptideTherapyPage() {
             }}
           >
             <Image
-              src="/physician-consultation-longevity-medicine-scottsdale.jpg"
-              alt="Peptide therapy consultation"
+              src="/doctor-patient-health-review-personalized-protocol.webp"
+              alt="Peptide therapy physician consultation personalized protocol"
               fill
               sizes="(max-width: 900px) 100vw, 560px"
               className="object-cover"

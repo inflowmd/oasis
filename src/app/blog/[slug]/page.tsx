@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -107,18 +108,21 @@ export default async function BlogPostPage({
         <div className="mx-sm" style={{ maxWidth: 1240 }}>
           <div
             style={{
+              position: "relative",
               aspectRatio: "16/9",
               borderRadius: 20,
-              background: "linear-gradient(135deg,var(--gp),var(--gl))",
+              overflow: "hidden",
               border: "1px solid rgba(232,237,232,0.5)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
             }}
           >
-            <span style={{ fontSize: 12, color: "var(--ts)", letterSpacing: "0.14em", textTransform: "uppercase" }}>
-              Featured image
-            </span>
+            <Image
+              src="/cardiovascular-heart-health-longevity-medicine.webp"
+              alt="Cardiovascular heart health longevity medicine"
+              fill
+              priority
+              sizes="(max-width: 1280px) 100vw, 1200px"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

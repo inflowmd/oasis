@@ -47,8 +47,8 @@ export default function CardiovascularEdge() {
             }}
           >
             <Image
-              src="/physician-consultation-longevity-medicine-scottsdale.jpg"
-              alt="Physician consultation in a Scottsdale longevity medicine practice"
+              src="/cardiovascular-heart-health-longevity-medicine.webp"
+              alt="Cardiovascular health assessment longevity medicine"
               fill
               sizes="(max-width: 900px) 100vw, 600px"
               className="object-cover"

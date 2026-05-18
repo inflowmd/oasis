@@ -18,7 +18,7 @@ const phases = [
   {
     n: "01",
     title: "Discovery",
-    image: "/physician-consultation-longevity-medicine-scottsdale.jpg",
+    image: "/dr-mehta-longevity-consultation-scottsdale.webp",
     body: [
       "Your first conversation with Dr. Mehta isn't a checklist. It's an exploration — of your history, your family's health patterns, your goals, your fears, what you've tried, what's worked, and what hasn't. He's listening for the story your data will tell.",
       "The diagnostic workup is built around you — not a standard panel applied to everyone. Dr. Mehta evaluates your health on a cardiovascular, metabolic, hormonal, and cellular level, selecting the specific assessments that matter for your individual risk profile and goals. No two clients receive identical workups, because no two clients arrive with identical biology.",
@@ -27,7 +27,7 @@ const phases = [
   {
     n: "02",
     title: "Your Blueprint",
-    image: "/doctor-patient-conversation-preventive-cardiology.jpg",
+    image: "/doctor-patient-health-review-personalized-protocol.webp",
     body: [
       "When your results are in, Dr. Mehta doesn't hand you a printout and send you home. He synthesizes dozens of data points into a clear, actionable picture of where your health stands today — and where it's heading.",
       "The review session is unhurried and thorough. Every finding is explained. Every question is answered. Every recommendation is grounded in your specific data, not generic guidelines. The result is a personalized protocol — your longevity blueprint — designed around the intersection of your biology, your goals, and the best available evidence.",
@@ -37,7 +37,7 @@ const phases = [
   {
     n: "03",
     title: "Implementation & Calibration",
-    image: "/active-aging-couple-cycling-cardiovascular-health.jpg",
+    image: "/physician-reviewing-patient-data-longevity-program.webp",
     body: [
       "Your protocol isn't static. As your body responds — and as new data comes in — Dr. Mehta adjusts course. Early follow-ups are closer together, then settle into a rhythm as your trajectory becomes clear.",
       "This is where the breadth of Dr. Mehta's clinical expertise matters. The protocol may draw on hormonal optimization, peptide therapy, regenerative science, metabolic interventions, or advanced cardiovascular prevention — whatever your biology calls for. The specific modalities are determined by your data, not by a menu.",

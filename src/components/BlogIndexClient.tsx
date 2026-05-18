@@ -7,16 +7,16 @@ import { categories, posts } from "@/lib/blog";
 
 const POST_IMAGES: Record<string, { src: string; alt: string }> = {
   "why-your-longevity-doctor-should-be-a-cardiologist": {
-    src: "/multigenerational-family-active-lifestyle-longevity.jpg",
-    alt: "Multigenerational family enjoying an active lifestyle — longevity across generations",
+    src: "/cardiovascular-heart-health-longevity-medicine.webp",
+    alt: "Cardiovascular heart health longevity medicine",
   },
   "what-your-coronary-calcium-score-actually-means": {
-    src: "/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg",
-    alt: "Active couple hiking the Arizona desert — cardiovascular health and longevity",
+    src: "/heart-monitoring-preventive-cardiology-scottsdale.webp",
+    alt: "Heart monitoring preventive cardiology Scottsdale",
   },
   "apob-vs-ldl-what-cardiologists-actually-measure": {
-    src: "/doctor-patient-conversation-preventive-cardiology.jpg",
-    alt: "Doctor-patient conversation on advanced lipid markers and preventive cardiology",
+    src: "/physician-reviewing-patient-data-longevity-program.webp",
+    alt: "Physician reviewing patient data longevity program",
   },
 };
 

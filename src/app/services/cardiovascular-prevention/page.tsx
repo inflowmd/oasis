@@ -108,8 +108,8 @@ export default function CardiovascularPreventionPage() {
             }}
           >
             <Image
-              src="/active-aging-couple-cycling-cardiovascular-health.jpg"
-              alt="Dr. Steven Mehta — interventional cardiologist"
+              src="/heart-monitoring-preventive-cardiology-scottsdale.webp"
+              alt="Heart monitoring preventive cardiology Scottsdale"
               fill
               sizes="(max-width: 900px) 100vw, 540px"
               className="object-cover"
@@ -177,6 +177,26 @@ export default function CardiovascularPreventionPage() {
                 <p style={{ fontSize: 15, color: "var(--tm)", lineHeight: 1.65 }}>{b.d}</p>
               </div>
             ))}
+          </div>
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              aspectRatio: "21/8",
+              borderRadius: 24,
+              overflow: "hidden",
+              border: "1px solid rgba(28,53,56,0.08)",
+              boxShadow: "0 30px 70px rgba(28,53,56,0.1)",
+              marginTop: 28,
+            }}
+          >
+            <Image
+              src="/cardiovascular-assessment-preventive-cardiology-exam.webp"
+              alt="Cardiovascular prevention exam assessment"
+              fill
+              sizes="(max-width: 1280px) 100vw, 1180px"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

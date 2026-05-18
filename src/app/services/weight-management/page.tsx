@@ -80,8 +80,8 @@ export default function WeightManagementPage() {
             }}
           >
             <Image
-              src="/healthy-man-running-fitness-healthspan-optimization.jpg"
-              alt="Metabolic evaluation"
+              src="/physician-reviewing-patient-data-longevity-program.webp"
+              alt="Medical weight management physician-directed protocol"
               fill
               sizes="(max-width: 900px) 100vw, 560px"
               className="object-cover"

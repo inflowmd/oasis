@@ -204,8 +204,8 @@ export default function EpigeneticEvaluationPage() {
             }}
           >
             <Image
-              src="/doctor-patient-conversation-preventive-cardiology.jpg"
-              alt="Epigenetic evaluation review"
+              src="/epigenetic-dna-testing-biological-age-analysis.webp"
+              alt="Epigenetic DNA testing biological age analysis"
               fill
               sizes="(max-width: 900px) 100vw, 560px"
               className="object-cover"

@@ -30,8 +30,8 @@ export default function WhenToStart() {
           }}
         >
           <Image
-            src="/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg"
-            alt="Active couple hiking the Arizona desert — a longevity lifestyle in motion"
+            src="/dr-mehta-longevity-consultation-scottsdale.webp"
+            alt="Dr. Mehta longevity medicine consultation in Scottsdale"
             fill
             sizes="(max-width: 900px) 100vw, 480px"
             className="object-cover"
