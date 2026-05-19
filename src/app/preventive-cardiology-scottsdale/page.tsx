@@ -140,8 +140,8 @@ export default function PreventiveCardiologyScottsdale() {
         }}
       >
         <Image
-          src="/cardiovascular-assessment-preventive-cardiology-exam.webp"
-          alt="Cardiovascular assessment preventive cardiology exam"
+          src="/doctor-patient-conversation-preventive-cardiology.jpg"
+          alt="Doctor and patient in a preventive cardiology conversation"
           fill
           sizes="100vw"
           className="object-cover"

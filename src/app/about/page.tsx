@@ -134,8 +134,6 @@ export default function AboutPage() {
           </div>
 
           <StoryRow
-            image="/multigenerational-family-active-lifestyle-longevity.jpg"
-            imageAlt="Multigenerational family active lifestyle longevity"
             heading={
               <>
                 A family <span className="fdi" style={{ color: "var(--gm)" }}>language.</span>
@@ -149,8 +147,6 @@ export default function AboutPage() {
           />
 
           <StoryRow
-            reverse
-            image="/doctor-patient-conversation-preventive-cardiology.jpg"
             heading={
               <>
                 The path to the <span className="fdi" style={{ color: "var(--gm)" }}>cath lab.</span>
@@ -163,8 +159,6 @@ export default function AboutPage() {
           />
 
           <StoryRow
-            image="/physician-reviewing-patient-data-longevity-program.webp"
-            imageAlt="Physician reviewing patient health data longevity program"
             heading={
               <>
                 A career on the <span className="fdi" style={{ color: "var(--gm)" }}>front line.</span>
@@ -179,48 +173,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* FULL-BLEED IMAGE BREAK */}
+      {/* QUOTE BAND */}
       <section
+        className="dark-mesh-2"
         style={{
           position: "relative",
-          height: "clamp(280px, 36vw, 480px)",
-          overflow: "hidden",
           background: "var(--dark)",
+          padding: "clamp(80px,10vw,130px) 0",
+          overflow: "hidden",
         }}
       >
-        <Image
-          src="/partnership.jpeg"
-          alt="The physician–patient partnership"
-          fill
-          sizes="100vw"
-          className="object-cover"
-          style={{ opacity: 0.7 }}
-        />
         <div
+          className="mx-sm"
           style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(15,31,31,0.55), rgba(28,53,56,0.7))",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "0 6%",
+            position: "relative",
+            zIndex: 1,
+            maxWidth: 980,
+            textAlign: "center",
           }}
         >
           <p
             className="fdi"
             style={{
-              fontSize: "clamp(22px,2.6vw,36px)",
+              fontSize: "clamp(24px,2.8vw,40px)",
               color: "rgba(255,255,255,0.95)",
-              textAlign: "center",
-              maxWidth: 1240,
               lineHeight: 1.35,
               fontWeight: 500,
             }}
@@ -235,9 +211,6 @@ export default function AboutPage() {
       <section style={{ background: "var(--tl)", padding: "100px 0 120px" }}>
         <div className="mx-lg">
           <StoryRow
-            reverse
-            image="/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg"
-            imageAlt="Active couple hiking Arizona desert — a wider lens on longevity"
             heading={
               <>
                 A wider <span className="fdi" style={{ color: "var(--gm)" }}>lens.</span>
@@ -250,7 +223,6 @@ export default function AboutPage() {
           />
 
           <StoryRow
-            image="/doctor-patient-conversation-preventive-cardiology.jpg"
             heading={
               <>
                 What he <span className="fdi" style={{ color: "var(--gm)" }}>built.</span>
@@ -488,74 +460,46 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* BEYOND MEDICINE — image + text */}
+      {/* BEYOND MEDICINE */}
       <section style={{ background: "var(--ow)", padding: "120px 0" }}>
-        <div
-          className="mx-lg phil-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1.1fr",
-            gap: "clamp(40px,6vw,80px)",
-            alignItems: "center",
-          }}
-        >
-          <div
+        <div className="mx-sm" style={{ maxWidth: 820 }}>
+          <p
             style={{
-              position: "relative",
-              width: "100%",
-              aspectRatio: "4/5",
-              borderRadius: 24,
-              overflow: "hidden",
-              border: "1px solid rgba(232,237,232,0.5)",
+              fontSize: 12,
+              fontWeight: 700,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "var(--gold)",
+              marginBottom: 16,
             }}
           >
-            <Image
-              src="/healthy-man-running-fitness-healthspan-optimization.jpg"
-              alt="Healthy man running — fitness as healthspan optimization"
-              fill
-              sizes="(max-width: 900px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <p
-              style={{
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                color: "var(--gold)",
-                marginBottom: 16,
-              }}
-            >
-              Beyond Medicine
+            Beyond Medicine
+          </p>
+          <h2
+            className="fd"
+            style={{
+              fontSize: "clamp(28px,3vw,42px)",
+              fontWeight: 700,
+              color: "var(--td)",
+              lineHeight: 1.15,
+              marginBottom: 24,
+            }}
+          >
+            A life outside the <span className="fdi" style={{ color: "var(--gm)" }}>clinic.</span>
+          </h2>
+          <div style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.85 }}>
+            <p style={{ marginBottom: 18 }}>
+              Music is still part of the daily picture — listening, playing, paying attention to ensembles in the way
+              that first taught him how to be present. He says the discipline of music made him a better physician.
             </p>
-            <h2
-              className="fd"
-              style={{
-                fontSize: "clamp(28px,3vw,42px)",
-                fontWeight: 700,
-                color: "var(--td)",
-                lineHeight: 1.15,
-                marginBottom: 24,
-              }}
-            >
-              A life outside the <span className="fdi" style={{ color: "var(--gm)" }}>clinic.</span>
-            </h2>
-            <div style={{ fontSize: 17, color: "var(--tm)", lineHeight: 1.85 }}>
-              <p style={{ marginBottom: 18 }}>
-                Music is still part of the daily picture — listening, playing, paying attention to ensembles in the way
-                that first taught him how to be present. He says the discipline of music made him a better physician.
-              </p>
-              <p style={{ marginBottom: 18 }}>
-                He&apos;s a husband and father. He applies the same principles to his own health that he asks of his
-                patients — not because he has to, but because the model works in both directions.
-              </p>
-              <p>
-                Outside of clinic and family, the throughline is the same: a quiet curiosity about how systems work,
-                what they need to keep working, and what gets in the way.
-              </p>
-            </div>
+            <p style={{ marginBottom: 18 }}>
+              He&apos;s a husband and father. He applies the same principles to his own health that he asks of his
+              patients — not because he has to, but because the model works in both directions.
+            </p>
+            <p>
+              Outside of clinic and family, the throughline is the same: a quiet curiosity about how systems work,
+              what they need to keep working, and what gets in the way.
+            </p>
           </div>
         </div>
       </section>
@@ -632,92 +576,59 @@ export default function AboutPage() {
 }
 
 function StoryRow({
-  image,
-  imageAlt = "",
   heading,
   paragraphs,
   pull,
-  reverse = false,
-  objectPosition = "center",
 }: {
-  image: string;
-  imageAlt?: string;
   heading: React.ReactNode;
   paragraphs: string[];
   pull?: string;
-  reverse?: boolean;
-  objectPosition?: string;
 }) {
   return (
     <div
       className="story-row"
       style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1.1fr",
-        gap: "clamp(40px,5vw,80px)",
-        alignItems: "center",
-        marginBottom: 80,
+        maxWidth: 820,
+        margin: "0 auto 56px",
       }}
     >
-      <div
+      <h3
+        className="fd"
         style={{
-          order: reverse ? 2 : 1,
-          position: "relative",
-          aspectRatio: "4/5",
-          borderRadius: 22,
-          overflow: "hidden",
-          border: "1px solid rgba(232,237,232,0.5)",
-          boxShadow: "0 30px 70px rgba(28,53,56,0.1)",
+          fontSize: "clamp(26px,2.6vw,38px)",
+          fontWeight: 700,
+          color: "var(--td)",
+          lineHeight: 1.15,
+          letterSpacing: "-0.005em",
+          marginBottom: 20,
         }}
       >
-        <Image
-          src={image}
-          alt={imageAlt}
-          fill
-          sizes="(max-width: 900px) 100vw, 540px"
-          className="object-cover"
-          style={{ objectPosition }}
-        />
-      </div>
-      <div style={{ order: reverse ? 1 : 2 }}>
-        <h3
-          className="fd"
+        {heading}
+      </h3>
+      {paragraphs.map((p, i) => (
+        <p
+          key={i}
+          style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.85, marginBottom: 16 }}
+        >
+          {p}
+        </p>
+      ))}
+      {pull && (
+        <blockquote
+          className="fdi"
           style={{
-            fontSize: "clamp(28px,2.8vw,40px)",
-            fontWeight: 700,
-            color: "var(--td)",
-            lineHeight: 1.15,
-            letterSpacing: "-0.005em",
-            marginBottom: 22,
+            fontSize: "clamp(20px,2vw,26px)",
+            color: "var(--gd)",
+            lineHeight: 1.45,
+            fontWeight: 500,
+            marginTop: 24,
+            paddingLeft: 22,
+            borderLeft: "2px solid var(--gold)",
           }}
         >
-          {heading}
-        </h3>
-        {paragraphs.map((p, i) => (
-          <p
-            key={i}
-            style={{ fontSize: 17, color: "var(--tm)", lineHeight: 1.85, marginBottom: 16 }}
-          >
-            {p}
-          </p>
-        ))}
-        {pull && (
-          <blockquote
-            className="fdi"
-            style={{
-              fontSize: "clamp(20px,2vw,26px)",
-              color: "var(--gd)",
-              lineHeight: 1.45,
-              fontWeight: 500,
-              marginTop: 24,
-              paddingLeft: 22,
-              borderLeft: "2px solid var(--gold)",
-            }}
-          >
-            {pull}
-          </blockquote>
-        )}
-      </div>
+          {pull}
+        </blockquote>
+      )}
     </div>
   );
 }

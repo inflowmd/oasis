@@ -351,8 +351,8 @@ export default function LongevityMedicineScottsdale() {
             }}
           >
             <Image
-              src="/dr-mehta-longevity-consultation-scottsdale.webp"
-              alt="Longevity medicine consultation Scottsdale Arizona"
+              src="/multigenerational-family-active-lifestyle-longevity.jpg"
+              alt="Multigenerational family active lifestyle — who seeks longevity medicine"
               fill
               sizes="(max-width: 900px) 100vw, 540px"
               className="object-cover"
