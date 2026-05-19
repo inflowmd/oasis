@@ -134,6 +134,7 @@ export default function AboutPage() {
           </div>
 
           <StoryRow
+            index="Chapter 01"
             heading={
               <>
                 A family <span className="fdi" style={{ color: "var(--gm)" }}>language.</span>
@@ -147,6 +148,7 @@ export default function AboutPage() {
           />
 
           <StoryRow
+            index="Chapter 02"
             heading={
               <>
                 The path to the <span className="fdi" style={{ color: "var(--gm)" }}>cath lab.</span>
@@ -159,6 +161,7 @@ export default function AboutPage() {
           />
 
           <StoryRow
+            index="Chapter 03"
             heading={
               <>
                 A career on the <span className="fdi" style={{ color: "var(--gm)" }}>front line.</span>
@@ -211,6 +214,7 @@ export default function AboutPage() {
       <section style={{ background: "var(--tl)", padding: "100px 0 120px" }}>
         <div className="mx-lg">
           <StoryRow
+            index="Chapter 04"
             heading={
               <>
                 A wider <span className="fdi" style={{ color: "var(--gm)" }}>lens.</span>
@@ -223,6 +227,7 @@ export default function AboutPage() {
           />
 
           <StoryRow
+            index="Chapter 05"
             heading={
               <>
                 What he <span className="fdi" style={{ color: "var(--gm)" }}>built.</span>
@@ -267,7 +272,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div style={{ maxWidth: 980 }}>
+          <div style={{ borderBottom: "1px solid rgba(28,53,56,0.13)" }}>
             <Belief
               n="01"
               title={<>Prevention <span className="fdi" style={{ color: "var(--gm)" }}>over reaction.</span></>}
@@ -462,32 +467,42 @@ export default function AboutPage() {
 
       {/* BEYOND MEDICINE */}
       <section style={{ background: "var(--ow)", padding: "120px 0" }}>
-        <div className="mx-sm" style={{ maxWidth: 820 }}>
-          <p
-            style={{
-              fontSize: 12,
-              fontWeight: 700,
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "var(--gold)",
-              marginBottom: 16,
-            }}
-          >
-            Beyond Medicine
-          </p>
-          <h2
-            className="fd"
-            style={{
-              fontSize: "clamp(28px,3vw,42px)",
-              fontWeight: 700,
-              color: "var(--td)",
-              lineHeight: 1.15,
-              marginBottom: 24,
-            }}
-          >
-            A life outside the <span className="fdi" style={{ color: "var(--gm)" }}>clinic.</span>
-          </h2>
-          <div style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.85 }}>
+        <div
+          className="mx-lg story-row"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "minmax(0,0.42fr) minmax(0,1fr)",
+            gap: "clamp(36px,5vw,90px)",
+            alignItems: "start",
+          }}
+        >
+          <div className="story-row-head">
+            <p
+              style={{
+                fontSize: 12,
+                fontWeight: 700,
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                color: "var(--gold)",
+                marginBottom: 16,
+              }}
+            >
+              Beyond Medicine
+            </p>
+            <h2
+              className="fd"
+              style={{
+                fontSize: "clamp(28px,2.8vw,40px)",
+                fontWeight: 700,
+                color: "var(--td)",
+                lineHeight: 1.12,
+                letterSpacing: "-0.01em",
+              }}
+            >
+              A life outside the <span className="fdi" style={{ color: "var(--gm)" }}>clinic.</span>
+            </h2>
+          </div>
+          <div style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.8, maxWidth: 680 }}>
             <p style={{ marginBottom: 18 }}>
               Music is still part of the daily picture — listening, playing, paying attention to ensembles in the way
               that first taught him how to be present. He says the discipline of music made him a better physician.
@@ -576,10 +591,12 @@ export default function AboutPage() {
 }
 
 function StoryRow({
+  index,
   heading,
   paragraphs,
   pull,
 }: {
+  index?: string;
   heading: React.ReactNode;
   paragraphs: string[];
   pull?: string;
@@ -588,47 +605,69 @@ function StoryRow({
     <div
       className="story-row"
       style={{
-        maxWidth: 820,
-        margin: "0 auto 56px",
+        display: "grid",
+        gridTemplateColumns: "minmax(0,0.42fr) minmax(0,1fr)",
+        gap: "clamp(36px,5vw,90px)",
+        padding: "clamp(44px,5vw,68px) 0",
+        borderTop: "1px solid rgba(28,53,56,0.13)",
+        alignItems: "start",
       }}
     >
-      <h3
-        className="fd"
-        style={{
-          fontSize: "clamp(26px,2.6vw,38px)",
-          fontWeight: 700,
-          color: "var(--td)",
-          lineHeight: 1.15,
-          letterSpacing: "-0.005em",
-          marginBottom: 20,
-        }}
-      >
-        {heading}
-      </h3>
-      {paragraphs.map((p, i) => (
-        <p
-          key={i}
-          style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.85, marginBottom: 16 }}
-        >
-          {p}
-        </p>
-      ))}
-      {pull && (
-        <blockquote
-          className="fdi"
+      <div className="story-row-head">
+        {index && (
+          <div
+            className="fd"
+            style={{
+              fontSize: 15,
+              fontWeight: 700,
+              fontStyle: "italic",
+              letterSpacing: "0.14em",
+              color: "var(--gold)",
+              marginBottom: 14,
+            }}
+          >
+            {index}
+          </div>
+        )}
+        <h3
+          className="fd"
           style={{
-            fontSize: "clamp(20px,2vw,26px)",
-            color: "var(--gd)",
-            lineHeight: 1.45,
-            fontWeight: 500,
-            marginTop: 24,
-            paddingLeft: 22,
-            borderLeft: "2px solid var(--gold)",
+            fontSize: "clamp(26px,2.8vw,40px)",
+            fontWeight: 700,
+            color: "var(--td)",
+            lineHeight: 1.12,
+            letterSpacing: "-0.01em",
           }}
         >
-          {pull}
-        </blockquote>
-      )}
+          {heading}
+        </h3>
+      </div>
+      <div style={{ maxWidth: 680 }}>
+        {paragraphs.map((p, i) => (
+          <p
+            key={i}
+            style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.8, marginBottom: 18 }}
+          >
+            {p}
+          </p>
+        ))}
+        {pull && (
+          <blockquote
+            className="fdi"
+            style={{
+              fontSize: "clamp(20px,1.9vw,26px)",
+              color: "var(--gd)",
+              lineHeight: 1.45,
+              fontWeight: 500,
+              marginTop: 26,
+              paddingLeft: 24,
+              borderLeft: "2px solid var(--gold)",
+            }}
+          >
+            {pull}
+          </blockquote>
+        )}
+      </div>
     </div>
   );
 }
@@ -644,17 +683,21 @@ function Belief({
 }) {
   return (
     <div
+      className="story-row"
       style={{
-        paddingBottom: 56,
-        marginBottom: 56,
-        borderBottom: "1px solid rgba(232,237,232,0.6)",
+        display: "grid",
+        gridTemplateColumns: "minmax(0,0.42fr) minmax(0,1fr)",
+        gap: "clamp(36px,5vw,90px)",
+        padding: "clamp(44px,5vw,64px) 0",
+        borderTop: "1px solid rgba(28,53,56,0.13)",
+        alignItems: "start",
       }}
     >
-      <div style={{ display: "flex", alignItems: "baseline", gap: 24, flexWrap: "wrap" }}>
+      <div className="story-row-head" style={{ display: "flex", alignItems: "baseline", gap: 18 }}>
         <span
           className="fd"
           style={{
-            fontSize: 40,
+            fontSize: 36,
             fontWeight: 300,
             color: "var(--gold)",
             lineHeight: 1,
@@ -666,18 +709,17 @@ function Belief({
         <h3
           className="fd"
           style={{
-            flex: 1,
-            fontSize: "clamp(26px,2.6vw,40px)",
+            fontSize: "clamp(26px,2.8vw,40px)",
             fontWeight: 700,
             color: "var(--td)",
-            lineHeight: 1.15,
-            letterSpacing: "-0.005em",
+            lineHeight: 1.12,
+            letterSpacing: "-0.01em",
           }}
         >
           {title}
         </h3>
       </div>
-      <p style={{ marginTop: 16, fontSize: 17, color: "var(--tm)", lineHeight: 1.8, maxWidth: 1120 }}>
+      <p style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.8, maxWidth: 680 }}>
         {children}
       </p>
     </div>

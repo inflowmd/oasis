@@ -645,6 +645,14 @@ a { text-decoration: none; color: inherit; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--tn); border-radius: 999px; }
 
+/* About — editorial chapter rows: pin the heading column while the
+   narrative scrolls, so the eye always has an anchor. */
+.story-row-head {
+  position: sticky;
+  top: 104px;
+  align-self: start;
+}
+
 @media (max-width: 900px) {
   .hf { flex-direction: column !important; gap: 32px !important; text-align: center; }
   .hl { max-width: 100% !important; }
@@ -697,9 +705,10 @@ a { text-decoration: none; color: inherit; }
   .form-row { grid-template-columns: 1fr !important; }
   .blog-grid { grid-template-columns: 1fr !important; }
   .related-grid { grid-template-columns: 1fr !important; }
-  .story-row { grid-template-columns: 1fr !important; gap: 28px !important; margin-bottom: 56px !important; }
+  .story-row { grid-template-columns: 1fr !important; gap: 18px !important; }
   .story-row > div:first-child { order: 1 !important; }
   .story-row > div:last-child { order: 2 !important; }
+  .story-row-head { position: static !important; top: auto !important; }
   .wts-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
   .wts-cards { grid-template-columns: 1fr !important; }
   .cve-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
