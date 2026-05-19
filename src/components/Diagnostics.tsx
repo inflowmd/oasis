@@ -72,8 +72,8 @@ export default function Diagnostics() {
           }}
         >
           <Image
-            src="/advanced-diagnostics-longevity-medicine-technology.webp"
-            alt="Advanced diagnostic technology longevity medicine Scottsdale"
+            src="/physician-consultation-longevity-medicine-scottsdale.jpg"
+            alt="Physician consultation in longevity medicine — every protocol begins with data, Scottsdale"
             fill
             sizes="(max-width: 1280px) 100vw, 1200px"
             className="object-cover"

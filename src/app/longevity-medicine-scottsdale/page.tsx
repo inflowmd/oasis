@@ -4,7 +4,6 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import JoinPrompt from "@/components/JoinPrompt";
 
 export const metadata: Metadata = {
   title: "Longevity Medicine in Scottsdale | Cardiologist-Led | Oasis Longevity",
@@ -176,8 +175,64 @@ export default function LongevityMedicineScottsdale() {
           </div>
         </div>
       </section>
-      <JoinPrompt background="var(--tl)" />
-
+      {/* JOIN CTA — content over image */}
+      <section
+        style={{
+          position: "relative",
+          padding: "clamp(96px,12vw,150px) 0",
+          overflow: "hidden",
+        }}
+      >
+        <Image
+          src="/physician-consultation-longevity-medicine-scottsdale.jpg"
+          alt="Physician consultation — longevity medicine in Scottsdale"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(15,31,31,0.66), rgba(28,53,56,0.8))",
+          }}
+        />
+        <div
+          className="mx-sm"
+          style={{
+            position: "relative",
+            zIndex: 1,
+            maxWidth: 760,
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 24,
+          }}
+        >
+          <p
+            className="fd"
+            style={{
+              fontSize: "clamp(22px,2.4vw,32px)",
+              fontWeight: 600,
+              color: "#fff",
+              lineHeight: 1.35,
+            }}
+          >
+            Interested in joining our practice?{" "}
+            <span className="fdi" style={{ color: "var(--gold)" }}>We&apos;d welcome your inquiry.</span>
+          </p>
+          <Link
+            href="/contact"
+            className="btn-gold"
+            style={{ padding: "17px 38px", fontSize: 12 }}
+          >
+            Join Our Practice
+          </Link>
+        </div>
+      </section>
 
       {/* FULL-BLEED BREAK */}
       <section
