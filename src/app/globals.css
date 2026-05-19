@@ -645,6 +645,20 @@ a { text-decoration: none; color: inherit; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--tn); border-radius: 999px; }
 
+/* Cardiovascular Edge — stat row rises in on load, staggered */
+@keyframes cveStatRise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.cve-stat {
+  opacity: 0;
+  animation: cveStatRise 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: calc(var(--cve-i, 0) * 0.12s + 0.15s);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cve-stat { opacity: 1; animation: none; }
+}
+
 /* About — editorial chapter rows: pin the heading column while the
    narrative scrolls, so the eye always has an anchor. */
 .story-row-head {
@@ -711,7 +725,8 @@ a { text-decoration: none; color: inherit; }
   .story-row-head { position: static !important; top: auto !important; }
   .wts-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
   .wts-cards { grid-template-columns: 1fr !important; }
-  .cve-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .cve-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .cve-stats { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
   .story-side-img { display: none !important; }
   .program-intro-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
   .program-intro-image { max-width: 420px; margin: 0 auto !important; }

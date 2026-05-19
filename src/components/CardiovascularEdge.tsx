@@ -20,70 +20,148 @@ const bullets = [
 
 export default function CardiovascularEdge() {
   return (
-    <section id="approach" style={{ background: "#fff", padding: "100px 0" }}>
-      <div className="mx cvf" style={{ display: "flex", alignItems: "flex-start", gap: "clamp(40px,6vw,80px)" }}>
-        <div style={{ flex: 1 }}>
-          <div className="pill" style={{ background: "var(--gold-pale)", color: "var(--gold)", border: "1px solid rgba(201,169,110,0.15)", marginBottom: 28 }}>
+    <section id="approach" style={{ background: "#fff", padding: "110px 0" }}>
+      <div className="mx-lg">
+        {/* Intro */}
+        <div style={{ maxWidth: 640, marginBottom: 56 }}>
+          <div
+            className="pill"
+            style={{
+              background: "var(--gold-pale)",
+              color: "var(--gold)",
+              border: "1px solid rgba(201,169,110,0.15)",
+              marginBottom: 28,
+            }}
+          >
             <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--gold)" }} />
             The Cardiovascular Edge
           </div>
-          <h2 className="fd" style={{ fontSize: "clamp(28px,2.8vw,42px)", fontWeight: 700, color: "var(--td)", lineHeight: 1.15, marginBottom: 20 }}>
-            Heart disease is the #1 killer.<br />
+          <h2
+            className="fd"
+            style={{
+              fontSize: "clamp(28px,2.8vw,42px)",
+              fontWeight: 700,
+              color: "var(--td)",
+              lineHeight: 1.15,
+              marginBottom: 20,
+            }}
+          >
+            Heart disease is the #1 killer.
+            <br />
             <span className="fdi" style={{ color: "var(--gm)" }}>Your longevity doctor should know that.</span>
           </h2>
-          <p style={{ fontSize: 16, color: "var(--tm)", lineHeight: 1.75, marginBottom: 28, maxWidth: 500 }}>
-            Most longevity practices are led by naturopaths or functional medicine practitioners. Dr. Mehta brings decades of interventional cardiology training and first-hand experience treating the disease longevity medicine exists to prevent.
+          <p style={{ fontSize: 16, color: "var(--tm)", lineHeight: 1.75 }}>
+            Most longevity practices are led by naturopaths or functional medicine practitioners. Dr. Mehta brings
+            decades of interventional cardiology training and first-hand experience treating the disease longevity
+            medicine exists to prevent.
           </p>
+        </div>
+
+        {/* Image + card, equal height */}
+        <div
+          className="cve-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "clamp(24px,3vw,40px)",
+            alignItems: "stretch",
+            marginBottom: 56,
+          }}
+        >
           <div
             style={{
               position: "relative",
-              width: "100%",
-              aspectRatio: "5/3",
+              minHeight: 420,
               borderRadius: 24,
               overflow: "hidden",
               border: "1px solid rgba(232,237,232,0.5)",
               boxShadow: "0 30px 70px rgba(28,53,56,0.1)",
-              marginBottom: 28,
             }}
           >
             <Image
               src="/cardiovascular-heart-health-longevity-medicine.webp"
               alt="Cardiovascular health assessment longevity medicine"
               fill
-              sizes="(max-width: 900px) 100vw, 600px"
+              sizes="(max-width: 900px) 100vw, 640px"
               className="object-cover"
             />
           </div>
-          <div className="g2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-            {stats.map((s) => (
-              <div key={s.v} style={{ display: "flex", gap: 14 }}>
-                <div style={{ width: 3, borderRadius: 3, background: s.gold ? "var(--gold)" : "var(--gl)", flexShrink: 0, alignSelf: "stretch" }} />
-                <div>
-                  <div className="fd" style={{ fontSize: 30, fontWeight: 700, color: "var(--gd)" }}>{s.v}</div>
-                  <div style={{ fontSize: 12, color: "var(--ts)", marginTop: 3 }}>{s.l}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="cvr" style={{ width: 440, flexShrink: 0 }}>
-          <div style={{ background: "var(--gd)", borderRadius: 24, padding: "36px 40px" }}>
-            <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--gold)", textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: 28 }}>
+          <div
+            style={{
+              background: "var(--gd)",
+              borderRadius: 24,
+              padding: "44px 44px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: 14,
+                fontWeight: 700,
+                color: "var(--gold)",
+                textTransform: "uppercase",
+                letterSpacing: "0.14em",
+                marginBottom: 26,
+              }}
+            >
               What a cardiologist brings
             </h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               {bullets.map((b) => (
                 <div key={b} style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
-                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: "rgba(201,169,110,0.15)", border: "1px solid rgba(201,169,110,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>
+                  <div
+                    style={{
+                      width: 28,
+                      height: 28,
+                      borderRadius: "50%",
+                      background: "rgba(201,169,110,0.15)",
+                      border: "1px solid rgba(201,169,110,0.2)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      marginTop: 1,
+                    }}
+                  >
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#C9A96E" />
                     </svg>
                   </div>
-                  <span style={{ fontSize: 17, color: "rgba(255,255,255,0.85)", lineHeight: 1.5 }}>{b}</span>
+                  <span style={{ fontSize: 16, color: "rgba(255,255,255,0.85)", lineHeight: 1.5 }}>{b}</span>
                 </div>
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Stats — full-width row, animated on load */}
+        <div
+          className="cve-stats"
+          style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "clamp(20px,3vw,40px)" }}
+        >
+          {stats.map((s, i) => (
+            <div
+              key={s.v}
+              className="cve-stat"
+              style={{ display: "flex", gap: 16, ["--cve-i" as string]: i }}
+            >
+              <div
+                style={{
+                  width: 3,
+                  borderRadius: 3,
+                  background: s.gold ? "var(--gold)" : "var(--gl)",
+                  flexShrink: 0,
+                  alignSelf: "stretch",
+                }}
+              />
+              <div>
+                <div className="fd" style={{ fontSize: 34, fontWeight: 700, color: "var(--gd)" }}>{s.v}</div>
+                <div style={{ fontSize: 12, color: "var(--ts)", marginTop: 4 }}>{s.l}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
