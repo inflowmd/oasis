@@ -69,6 +69,7 @@ export default function CardiovascularEdge() {
           }}
         >
           <div
+            className="cve-image"
             style={{
               position: "relative",
               minHeight: 420,
@@ -85,8 +86,10 @@ export default function CardiovascularEdge() {
               sizes="(max-width: 900px) 100vw, 640px"
               className="object-cover"
             />
+            <span aria-hidden className="cve-image-rule" />
           </div>
           <div
+            className="cve-card"
             style={{
               background: "var(--gd)",
               borderRadius: 24,
@@ -94,6 +97,7 @@ export default function CardiovascularEdge() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
+              border: "1px solid transparent",
             }}
           >
             <h3

@@ -645,6 +645,55 @@ a { text-decoration: none; color: inherit; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--tn); border-radius: 999px; }
 
+/* Cardiovascular Edge — image + card hover */
+.cve-image {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.cve-image img {
+  transition: filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.cve-image .cve-image-rule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 2;
+}
+.cve-image:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 90px rgba(28, 53, 56, 0.22);
+}
+.cve-image:hover img {
+  filter: saturate(1.08) brightness(1.05);
+}
+.cve-image:hover .cve-image-rule {
+  transform: scaleX(1);
+}
+
+.cve-card {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.cve-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 169, 110, 0.45) !important;
+  box-shadow: 0 40px 90px rgba(15, 31, 31, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cve-image, .cve-image img, .cve-card { transition: none !important; }
+  .cve-image:hover, .cve-card:hover { transform: none !important; }
+  .cve-image:hover img { filter: none !important; }
+  .cve-image .cve-image-rule { display: none !important; }
+}
+
 /* Cardiovascular Edge — stat row rises in on load, staggered */
 @keyframes cveStatRise {
   from { opacity: 0; transform: translateY(24px); }
