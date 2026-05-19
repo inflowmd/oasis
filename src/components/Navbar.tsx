@@ -37,7 +37,7 @@ const navItems: NavItem[] = [
       { label: "Prescott", href: "/locations/prescott" },
     ],
   },
-  { label: "Blog", href: "/blog" },
+  // { label: "Blog", href: "/blog" }, // hidden until blog content is ready
 ];
 
 const DARK_HERO_PATHS = [
