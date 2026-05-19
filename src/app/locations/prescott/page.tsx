@@ -12,8 +12,6 @@ export default function PrescottPage() {
   return (
     <LocationLayout
       city="Prescott"
-      heroImage="/dr-mehta-longevity-consultation-scottsdale.webp"
-      heroImageAlt="Dr. Mehta longevity medicine consultation Prescott Arizona"
       intro="Dr. Mehta brings cardiologist-led longevity medicine to the Quad Cities area — a level of preventive cardiovascular care not previously available in the Prescott region."
       address={{ line1: "2001 Excellence Way, Suite 200", line2: "Prescott, AZ 86301" }}
       hours={[

@@ -21,7 +21,7 @@ export default function Footer() {
               alt="Oasis Longevity Medicine"
               width={120}
               height={120}
-              style={{ height: 32, width: "auto", filter: "brightness(1.4)" }}
+              style={{ height: 56, width: "auto", filter: "brightness(1.4)" }}
             />
             <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", marginTop: 18, maxWidth: 280, lineHeight: 1.7 }}>
               Physician-led longevity medicine grounded in cardiovascular science. Scottsdale &amp; Prescott, Arizona.

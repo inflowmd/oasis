@@ -134,8 +134,8 @@ export default function AboutPage() {
           </div>
 
           <StoryRow
-            image="/ssmehta.jpg"
-            objectPosition="top"
+            image="/multigenerational-family-active-lifestyle-longevity.jpg"
+            imageAlt="Multigenerational family active lifestyle longevity"
             heading={
               <>
                 A family <span className="fdi" style={{ color: "var(--gm)" }}>language.</span>
@@ -236,8 +236,8 @@ export default function AboutPage() {
         <div className="mx-lg">
           <StoryRow
             reverse
-            image="/ssmehta.jpg"
-            objectPosition="center"
+            image="/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg"
+            imageAlt="Active couple hiking Arizona desert — a wider lens on longevity"
             heading={
               <>
                 A wider <span className="fdi" style={{ color: "var(--gm)" }}>lens.</span>
@@ -327,17 +327,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* IMAGE BREAK — preventive cardiology assessment */}
+      {/* CTA — lifestyle image */}
       <section
         style={{
           position: "relative",
-          height: "clamp(280px,38vw,460px)",
+          padding: "clamp(100px,12vw,160px) 0",
           overflow: "hidden",
         }}
       >
         <Image
-          src="/cardiovascular-assessment-preventive-cardiology-exam.webp"
-          alt="Preventive cardiology cardiovascular assessment"
+          src="/active-aging-couple-cycling-cardiovascular-health.jpg"
+          alt="Active aging couple cycling — partnership in lifelong health"
           fill
           sizes="100vw"
           className="object-cover"
@@ -347,9 +347,44 @@ export default function AboutPage() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(180deg, rgba(15,31,31,0.25), rgba(15,31,31,0.4))",
+            background:
+              "linear-gradient(180deg, rgba(15,31,31,0.62), rgba(28,53,56,0.78))",
           }}
         />
+        <div
+          className="mx-sm"
+          style={{ position: "relative", zIndex: 1, maxWidth: 760, textAlign: "center" }}
+        >
+          <h2
+            className="fd page-cta-h2"
+            style={{
+              fontSize: "clamp(30px,3.4vw,50px)",
+              fontWeight: 700,
+              color: "#fff",
+              lineHeight: 1.12,
+              marginBottom: 22,
+            }}
+          >
+            A partnership built around{" "}
+            <span className="fdi" style={{ color: "var(--gold)" }}>your whole life.</span>
+          </h2>
+          <p
+            style={{
+              fontSize: 18,
+              color: "rgba(232,237,232,0.8)",
+              lineHeight: 1.7,
+              marginBottom: 36,
+              maxWidth: 540,
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            Depth over volume. Dr. Mehta works with a limited number of clients at any one time.
+          </p>
+          <Link href="/contact" className="btn-gold" style={{ padding: "18px 40px", fontSize: 12 }}>
+            Join Our Practice
+          </Link>
+        </div>
       </section>
 
       {/* TIMELINE */}

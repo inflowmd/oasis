@@ -91,8 +91,8 @@ export default function LongevityMedicineScottsdale() {
               }}
             >
               <Image
-                src="/advanced-diagnostics-longevity-medicine-technology.webp"
-                alt="Advanced longevity medicine diagnostics Scottsdale"
+                src="/active-couple-hiking-arizona-desert-longevity-lifestyle.jpg"
+                alt="Active couple hiking the Arizona desert — longevity medicine lifestyle in Scottsdale"
                 fill
                 sizes="(max-width: 900px) 100vw, 480px"
                 priority
