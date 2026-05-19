@@ -14,6 +14,7 @@ export default function PrescottPage() {
       city="Prescott"
       intro="Dr. Mehta brings cardiologist-led longevity medicine to the Quad Cities area — a level of preventive cardiovascular care not previously available in the Prescott region."
       address={{ line1: "2001 Excellence Way, Suite 200", line2: "Prescott, AZ 86301" }}
+      mapEmbedSrc="https://www.google.com/maps?q=2001+Excellence+Way+Suite+200,+Prescott,+AZ+86301&z=15&output=embed"
       hours={[
         { day: "Select weekdays", time: "By appointment" },
         { day: "Saturday", time: "By appointment" },

@@ -125,6 +125,7 @@ export default function LocationLayout({
                 height="100%"
                 style={{ border: 0, position: "absolute", inset: 0 }}
                 loading="lazy"
+                allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
                 title={`${city} office map`}
               />

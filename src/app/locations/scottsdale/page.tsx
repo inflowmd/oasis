@@ -14,6 +14,7 @@ export default function ScottsdalePage() {
       city="Scottsdale"
       intro="The Scottsdale office is the home of Dr. Mehta's longevity practice — a quiet, considered environment built for the kind of unhurried conversations the work requires."
       address={{ line1: "7659 E. Pinnacle Peak Rd, Suite 110", line2: "Scottsdale, AZ 85255" }}
+      mapEmbedSrc="https://www.google.com/maps?q=7659+E+Pinnacle+Peak+Rd+Suite+110,+Scottsdale,+AZ+85255&z=15&output=embed"
       hours={[
         { day: "Monday – Friday", time: "8:00 AM – 5:00 PM" },
         { day: "Saturday", time: "By appointment" },
