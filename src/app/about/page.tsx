@@ -308,8 +308,11 @@ export default function AboutPage() {
       <section
         style={{
           position: "relative",
-          padding: "clamp(100px,12vw,160px) 0",
+          minHeight: "clamp(560px, 78vw, 760px)",
+          padding: "clamp(140px,16vw,220px) 0",
           overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
         }}
       >
         <Image
@@ -318,6 +321,7 @@ export default function AboutPage() {
           fill
           sizes="100vw"
           className="object-cover"
+          style={{ objectPosition: "center 35%" }}
         />
         <div
           aria-hidden
