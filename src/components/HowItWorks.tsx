@@ -14,10 +14,10 @@ type Step = {
 const steps: Step[] = [
   {
     n: "1",
-    title: (<>Application &amp; <span className="fdi" style={{ color: "var(--gm)", fontSize: "1.25em" }}>Discovery</span></>),
+    title: (<>Inquiry &amp; <span className="fdi" style={{ color: "var(--gm)", fontSize: "1.25em" }}>Discovery</span></>),
     body: "An unhurried, customized first consultation. Dr. Mehta takes whatever time is needed to understand your full picture — paired with lab testing that goes far beyond standard panels.",
     image: "/application-discovery.jpeg",
-    alt: "Application and discovery consultation with Dr. Mehta",
+    alt: "Inquiry and discovery consultation with Dr. Mehta",
     borderBottom: true,
   },
   {

@@ -46,7 +46,7 @@ export default function CTA() {
             margin: "0 auto 52px",
           }}
         >
-          Limited enrollment. Applications reviewed by Dr. Mehta personally.
+          Limited enrollment. Inquiries reviewed by Dr. Mehta personally.
         </p>
 
         <div className="cta-btns">

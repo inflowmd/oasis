@@ -560,7 +560,7 @@ export default function AboutPage() {
               marginRight: "auto",
             }}
           >
-            Limited enrollment. Every application is reviewed by Dr. Mehta personally.
+            Limited enrollment. Every inquiry is reviewed by Dr. Mehta personally.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact" className="btn-gold" style={{ padding: "18px 40px", fontSize: 12 }}>

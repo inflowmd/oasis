@@ -96,7 +96,7 @@ const faqs = [
   },
   {
     q: "How do I get started?",
-    a: "Start by submitting an application. Dr. Mehta reviews every application personally to ensure the program is the right fit. If accepted, your care coordinator will schedule your initial consultation and begin the onboarding process.",
+    a: "Start by submitting an inquiry. Dr. Mehta reviews every inquiry personally to ensure the program is the right fit. If accepted, your care coordinator will schedule your initial consultation and begin the onboarding process.",
   },
 ];
 
@@ -657,7 +657,7 @@ export default function ProgramPage() {
               marginRight: "auto",
             }}
           >
-            Limited enrollment. Every application is reviewed by Dr. Mehta personally.
+            Limited enrollment. Every inquiry is reviewed by Dr. Mehta personally.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact" className="btn-gold" style={{ padding: "18px 40px", fontSize: 12 }}>

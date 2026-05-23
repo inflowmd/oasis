@@ -40,7 +40,7 @@ export default function Footer() {
             <FooterLink href="/about">About Dr. Mehta</FooterLink>
             <FooterLink href="/program">The Program</FooterLink>
             {/* <FooterLink href="/blog">Blog</FooterLink> hidden until blog content is ready */}
-            <FooterLink href="/contact">Apply</FooterLink>
+            <FooterLink href="/contact">Join Our Practice</FooterLink>
           </FooterCol>
 
           <FooterCol heading="Our Approach">

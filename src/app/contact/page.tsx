@@ -25,7 +25,7 @@ export default function ContactPage() {
         }}
       >
         <div className="mx" style={{ maxWidth: 1080, margin: "0 auto", textAlign: "center" }}>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Apply" }]} />
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Join Our Practice" }]} />
           <p
             style={{
               fontSize: 12,
@@ -110,7 +110,7 @@ export default function ContactPage() {
                   marginBottom: 8,
                 }}
               >
-                &ldquo;I review every application personally.&rdquo;
+                &ldquo;I review every inquiry personally.&rdquo;
               </p>
               <p style={{ fontSize: 12, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--gold)" }}>
                 Dr. Steven Mehta

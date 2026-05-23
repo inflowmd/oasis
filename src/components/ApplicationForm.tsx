@@ -64,10 +64,10 @@ export default function ApplicationForm() {
           </svg>
         </div>
         <h3 className="fd" style={{ fontSize: 26, fontWeight: 700, color: "var(--td)", marginBottom: 12 }}>
-          Application received.
+          Inquiry received.
         </h3>
         <p style={{ fontSize: 16, color: "var(--tm)", lineHeight: 1.7, maxWidth: 460, margin: "0 auto" }}>
-          Dr. Mehta personally reviews every application. A member of our team will be in touch within two business days.
+          Dr. Mehta personally reviews every inquiry. A member of our team will be in touch within two business days.
         </p>
       </div>
     );
