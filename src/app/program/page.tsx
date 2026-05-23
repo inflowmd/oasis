@@ -293,9 +293,12 @@ export default function ProgramPage() {
       <section
         style={{
           position: "relative",
-          height: "clamp(280px, 36vw, 460px)",
+          minHeight: "clamp(520px, 70vw, 720px)",
+          padding: "clamp(120px,14vw,200px) 0",
           overflow: "hidden",
           background: "var(--dark)",
+          display: "flex",
+          alignItems: "center",
         }}
       >
         <Image
@@ -304,7 +307,7 @@ export default function ProgramPage() {
           fill
           sizes="100vw"
           className="object-cover"
-          style={{ opacity: 0.6 }}
+          style={{ opacity: 0.6, objectPosition: "center 30%" }}
         />
         <div
           style={{
