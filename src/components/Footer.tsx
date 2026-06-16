@@ -9,8 +9,8 @@ export default function Footer() {
           className="footer-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "1.4fr 1fr 1fr 1fr",
-            gap: 48,
+            gridTemplateColumns: "1.4fr 1fr 1fr 1fr 1fr",
+            gap: 40,
             marginBottom: 56,
             alignItems: "flex-start",
           }}
@@ -48,6 +48,10 @@ export default function Footer() {
             <FooterLink href="/preventive-cardiology-scottsdale">Preventive Cardiology</FooterLink>
             <FooterLink href="/locations/scottsdale">Scottsdale</FooterLink>
             <FooterLink href="/locations/prescott">Prescott</FooterLink>
+          </FooterCol>
+
+          <FooterCol heading="Additional Services">
+            <FooterLink href="/aesthetics" rel="nofollow">Vein &amp; Aesthetics</FooterLink>
           </FooterCol>
 
           <FooterCol heading="Contact">
@@ -115,10 +119,19 @@ function FooterCol({ heading, children }: { heading: string; children: React.Rea
   );
 }
 
-function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+function FooterLink({
+  href,
+  rel,
+  children,
+}: {
+  href: string;
+  rel?: string;
+  children: React.ReactNode;
+}) {
   return (
     <Link
       href={href}
+      rel={rel}
       style={{
         fontSize: 13,
         color: "rgba(255,255,255,0.55)",
