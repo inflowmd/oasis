@@ -5,9 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+type DropdownChild = { label: string; href: string };
 type NavItem =
   | { label: string; href: string }
-  | { label: string; children: { label: string; href: string }[] };
+  | {
+      label: string;
+      href?: string;
+      align?: "center" | "right";
+      children: DropdownChild[];
+    };
 
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
@@ -37,7 +43,19 @@ const navItems: NavItem[] = [
       { label: "Prescott", href: "/locations/prescott" },
     ],
   },
-  { label: "Vein & Aesthetics", href: "/aesthetics" },
+  {
+    label: "Vein & Aesthetics",
+    href: "/aesthetics",
+    align: "right",
+    children: [
+      { label: "Varicose Veins Treatment", href: "/aesthetics/varicose-veins" },
+      { label: "Sclerotherapy", href: "/aesthetics/sclerotherapy" },
+      { label: "RF Microneedling", href: "/aesthetics/microneedling" },
+      { label: "Exosomes", href: "/aesthetics/exosomes" },
+      { label: "Hair Restoration", href: "/aesthetics/hair-restoration" },
+      { label: "Hand Rejuvenation", href: "/aesthetics/hand-rejuvenation" },
+    ],
+  },
   // { label: "Blog", href: "/blog" }, // hidden until blog content is ready
 ];
 
@@ -143,7 +161,7 @@ export default function Navbar() {
 
         <div className="nl" style={{ display: "flex", alignItems: "center", gap: 24, height: 40 }}>
           {navItems.map((item) => {
-            if ("href" in item) {
+            if (!("children" in item)) {
               return (
                 <Link key={item.label} href={item.href} style={linkStyle}>
                   {item.label}
@@ -151,6 +169,23 @@ export default function Navbar() {
               );
             }
             const isOpen = openDropdown === item.label;
+            const chevron = (
+              <svg
+                width="9"
+                height="9"
+                viewBox="0 0 12 12"
+                fill="none"
+                style={{ display: "block", flexShrink: 0 }}
+              >
+                <path
+                  d="M2 4l4 4 4-4"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            );
             return (
               <div
                 key={item.label}
@@ -158,41 +193,38 @@ export default function Navbar() {
                 onMouseEnter={() => setOpenDropdown(item.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button
-                  type="button"
-                  style={{
-                    ...linkStyle,
-                    background: "transparent",
-                    border: "none",
-                    padding: 0,
-                    margin: 0,
-                    fontFamily: "inherit",
-                    gap: 6,
-                  }}
-                >
-                  {item.label}
-                  <svg
-                    width="9"
-                    height="9"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    style={{ display: "block", flexShrink: 0 }}
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    style={{ ...linkStyle, gap: 6 }}
                   >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
+                    {item.label}
+                    {chevron}
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    style={{
+                      ...linkStyle,
+                      background: "transparent",
+                      border: "none",
+                      padding: 0,
+                      margin: 0,
+                      fontFamily: "inherit",
+                      gap: 6,
+                    }}
+                  >
+                    {item.label}
+                    {chevron}
+                  </button>
+                )}
                 <div
                   style={{
                     position: "absolute",
                     top: "100%",
-                    left: "50%",
-                    transform: "translateX(-50%)",
+                    ...(item.align === "right"
+                      ? { right: 0 }
+                      : { left: "50%", transform: "translateX(-50%)" }),
                     paddingTop: 14,
                     opacity: isOpen ? 1 : 0,
                     visibility: isOpen ? "visible" : "hidden",
@@ -304,7 +336,7 @@ export default function Navbar() {
         }}
       >
         {navItems.map((item) => {
-          if ("href" in item) {
+          if (!("children" in item)) {
             return (
               <Link
                 key={item.label}
@@ -326,55 +358,96 @@ export default function Navbar() {
             );
           }
           const expanded = mobileExpanded === item.label;
+          const chevronSvg = (
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              style={{
+                transform: expanded ? "rotate(180deg)" : "rotate(0)",
+                transition: "transform 0.3s",
+              }}
+            >
+              <path
+                d="M2 4l4 4 4-4"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          );
+          const headerLabelStyle: React.CSSProperties = {
+            fontSize: 13,
+            fontWeight: 600,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            color: "var(--gd)",
+            fontFamily: "inherit",
+          };
           return (
             <div
               key={item.label}
               style={{ borderBottom: "1px solid rgba(232,237,232,0.5)" }}
             >
-              <button
-                type="button"
-                onClick={() => setMobileExpanded(expanded ? null : item.label)}
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "16px 0",
-                  background: "transparent",
-                  border: "none",
-                  cursor: "pointer",
-                  fontSize: 13,
-                  fontWeight: 600,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: "var(--gd)",
-                  fontFamily: "inherit",
-                }}
-              >
-                <span>{item.label}</span>
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
+              {item.href ? (
+                <div
                   style={{
-                    transform: expanded ? "rotate(180deg)" : "rotate(0)",
-                    transition: "transform 0.3s",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "16px 0",
                   }}
                 >
-                  <path
-                    d="M2 4l4 4 4-4"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    style={{ ...headerLabelStyle, flex: 1 }}
+                  >
+                    {item.label}
+                  </Link>
+                  <button
+                    type="button"
+                    aria-label={expanded ? "Collapse" : "Expand"}
+                    onClick={() => setMobileExpanded(expanded ? null : item.label)}
+                    style={{
+                      background: "transparent",
+                      border: "none",
+                      padding: "4px 8px",
+                      cursor: "pointer",
+                      color: "var(--gd)",
+                      display: "inline-flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    {chevronSvg}
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setMobileExpanded(expanded ? null : item.label)}
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "16px 0",
+                    background: "transparent",
+                    border: "none",
+                    cursor: "pointer",
+                    ...headerLabelStyle,
+                  }}
+                >
+                  <span>{item.label}</span>
+                  {chevronSvg}
+                </button>
+              )}
               <div
                 style={{
                   overflow: "hidden",
-                  maxHeight: expanded ? 200 : 0,
+                  maxHeight: expanded ? 360 : 0,
                   transition: "max-height 0.35s cubic-bezier(0.25,0.46,0.45,0.94)",
                 }}
               >

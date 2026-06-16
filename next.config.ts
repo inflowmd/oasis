@@ -20,7 +20,6 @@ const nextConfig: NextConfig = {
       { source: "/faq", destination: "/program", permanent: true },
       { source: "/reviews", destination: "/", permanent: true },
       { source: "/before-after", destination: "/aesthetics", permanent: true },
-      { source: "/payment-plans", destination: "/contact", permanent: true },
       { source: "/book-consultation", destination: "/contact", permanent: true },
     ];
   },

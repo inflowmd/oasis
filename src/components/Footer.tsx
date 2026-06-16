@@ -52,6 +52,7 @@ export default function Footer() {
 
           <FooterCol heading="Additional Services">
             <FooterLink href="/aesthetics" rel="nofollow">Vein &amp; Aesthetics</FooterLink>
+            <FooterLink href="/payment-plans">Payment Plans</FooterLink>
           </FooterCol>
 
           <FooterCol heading="Contact">
@@ -84,15 +85,32 @@ export default function Footer() {
             gap: 16,
           }}
         >
-          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>© 2026 Oasis Vein &amp; Vitality. All rights reserved.</p>
-          <div style={{ display: "flex", gap: 24 }}>
-            <Link href="/contact" style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>
-              Privacy
+          <p
+            style={{
+              fontSize: 12,
+              color: "rgba(255,255,255,0.25)",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
+              flexWrap: "wrap",
+            }}
+          >
+            <span>© 2026 Oasis Vein &amp; Vitality</span>
+            <span aria-hidden style={{ color: "rgba(255,255,255,0.18)" }}>|</span>
+            <Link
+              href="/accessibility-statement"
+              style={{ color: "rgba(255,255,255,0.45)", transition: "color 0.3s" }}
+            >
+              Accessibility Statement
             </Link>
-            <Link href="/contact" style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>
-              Accessibility
+            <span aria-hidden style={{ color: "rgba(255,255,255,0.18)" }}>|</span>
+            <Link
+              href="/privacy-policy"
+              style={{ color: "rgba(255,255,255,0.45)", transition: "color 0.3s" }}
+            >
+              Privacy Policy
             </Link>
-          </div>
+          </p>
         </div>
       </div>
     </footer>
