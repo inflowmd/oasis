@@ -234,32 +234,6 @@ export default function LongevityMedicineScottsdale() {
         </div>
       </section>
 
-      {/* FULL-BLEED BREAK */}
-      <section
-        style={{
-          position: "relative",
-          height: "clamp(260px, 32vw, 420px)",
-          overflow: "hidden",
-          background: "var(--dark)",
-        }}
-      >
-        <Image
-          src="/partnership.jpeg"
-          alt="Longitudinal physician partnership"
-          fill
-          sizes="100vw"
-          className="object-cover"
-          style={{ opacity: 0.65 }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "linear-gradient(180deg, rgba(15,31,31,0.5), rgba(28,53,56,0.7))",
-          }}
-        />
-      </section>
-
       {/* CREDENTIALS MATTER */}
       <section style={{ background: "var(--ow)", padding: "100px 0" }}>
         <div

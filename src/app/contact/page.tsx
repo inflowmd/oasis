@@ -121,6 +121,65 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* CHERRY PAYMENT PLANS — subtle note */}
+      <section style={{ background: "var(--ow)", padding: "0 0 60px" }}>
+        <div
+          className="mx-sm"
+          style={{
+            maxWidth: 720,
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "flex-start",
+            gap: 14,
+            padding: "20px 22px",
+            border: "1px solid rgba(28,53,56,0.1)",
+            borderRadius: 14,
+            background: "rgba(232,237,232,0.25)",
+          }}
+        >
+          <span
+            aria-hidden
+            style={{
+              flexShrink: 0,
+              width: 28,
+              height: 28,
+              borderRadius: "50%",
+              background: "var(--gold-pale)",
+              border: "1px solid rgba(201,169,110,0.25)",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: 2,
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"
+                fill="var(--gold)"
+              />
+            </svg>
+          </span>
+          <div>
+            <p
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "var(--gold)",
+                marginBottom: 4,
+              }}
+            >
+              Flexible Payment Options
+            </p>
+            <p style={{ fontSize: 13, color: "var(--tm)", lineHeight: 1.6 }}>
+              We offer payment plans through Cherry for health, wellness and aesthetic services. Ask about monthly
+              payment options when you schedule your consultation.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* LOCATIONS SIDE BY SIDE */}
       <section style={{ background: "var(--tl)", padding: "100px 0" }}>
         <div className="mx" style={{ maxWidth: 1000, margin: "0 auto" }}>
