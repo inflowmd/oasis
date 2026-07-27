@@ -5,13 +5,20 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { ServiceHero, ServiceCTA, SectionTitle } from "@/components/ServiceShell";
 import JoinPrompt from "@/components/JoinPrompt";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
 import type { ReactNode } from "react";
 
+const SLUG = "/services/epigenetic-evaluation";
+const TITLE = "Epigenetic Evaluation Scottsdale | Biological Age";
+const DESCRIPTION =
+  "Measure how fast your cells are aging and what to change. Cardiologist-led epigenetic evaluation and longevity protocols in Scottsdale and Prescott, AZ.";
+
 export const metadata: Metadata = {
-  title: "Epigenetic Evaluation | Biological Age Testing | Oasis Longevity Scottsdale",
-  description:
-    "Measure how fast your cells are actually aging — and what to change. Cardiologist-led epigenetic evaluation translates gene expression data into precise lifestyle and longevity protocols.",
-  alternates: { canonical: "/services/epigenetic-evaluation" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 type Area = { title: string; body: string; icon: ReactNode };
@@ -83,6 +90,7 @@ const faqs = [
 export default function EpigeneticEvaluationPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Genetics" />
       <Navbar />
 
       <ServiceHero

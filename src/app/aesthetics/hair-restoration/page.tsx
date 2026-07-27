@@ -3,12 +3,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { AestheticsHero, AestheticsCTA, ProseSection, Benefits } from "@/components/AestheticsShell";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/aesthetics/hair-restoration";
+const TITLE = "Hair Restoration Scottsdale | Non-Surgical Regrowth";
+const DESCRIPTION =
+  "Reverse hair loss with non-surgical hair restoration in Scottsdale — exosomes, BHRT and peptides for men and women, personalized by Dr. Steven Mehta.";
 
 export const metadata: Metadata = {
-  title: "Hair Restoration | Non-Surgical Hair Regrowth | Oasis Vein & Vitality | Scottsdale",
-  description:
-    "Reverse hair loss with cutting-edge, non-surgical hair restoration for men and women — exosomes, BHRT and peptides with Dr. Steven Mehta in Scottsdale, AZ.",
-  alternates: { canonical: "/aesthetics/hair-restoration" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const benefits = [
@@ -48,6 +55,7 @@ const faqs = [
 export default function HairRestorationPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Dermatology" />
       <Navbar />
 
       <AestheticsHero

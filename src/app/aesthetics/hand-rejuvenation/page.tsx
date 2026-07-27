@@ -3,12 +3,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { AestheticsHero, AestheticsCTA, ProseSection, Benefits } from "@/components/AestheticsShell";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/aesthetics/hand-rejuvenation";
+const TITLE = "Hand Rejuvenation Scottsdale | Restore Youthful Hands";
+const DESCRIPTION =
+  "Restore volume, fade age spots and minimize veins with non-surgical hand rejuvenation in Scottsdale, AZ — microneedling, fillers and sclerotherapy.";
 
 export const metadata: Metadata = {
-  title: "Hand Rejuvenation | Oasis Vein & Vitality | Scottsdale",
-  description:
-    "Give your hands a more supple, youthful appearance with non-surgical hand rejuvenation. Dr. Steven Mehta in Scottsdale, AZ.",
-  alternates: { canonical: "/aesthetics/hand-rejuvenation" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const benefits = [
@@ -53,6 +60,7 @@ const faqs = [
 export default function HandRejuvenationPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Dermatology" />
       <Navbar />
 
       <AestheticsHero
@@ -76,6 +84,39 @@ export default function HandRejuvenationPage() {
       </ProseSection>
 
       <Benefits items={benefits} />
+
+      <ProseSection
+        eyebrow="Treatment Options"
+        title="Three approaches to"
+        italicTail="hand rejuvenation."
+      >
+        <h3 className="fd" style={{ fontSize: 22, fontWeight: 700, color: "var(--gd)", marginTop: 12, marginBottom: 10 }}>
+          Sclerotherapy for Hand Veins
+        </h3>
+        <p style={{ marginBottom: 26 }}>
+          Prominent veins on the back of the hands and forearms can be treated with sclerotherapy. Dr. Mehta injects
+          a sclerosant into the visible veins, causing them to close and gradually fade from view. The procedure is
+          virtually painless and requires no downtime.
+        </p>
+
+        <h3 className="fd" style={{ fontSize: 22, fontWeight: 700, color: "var(--gd)", marginBottom: 10 }}>
+          RF Microneedling for Hands
+        </h3>
+        <p style={{ marginBottom: 26 }}>
+          Radiofrequency microneedling with Sylfirm X stimulates collagen production in the skin of the hands,
+          improving tone, texture, and firmness. The treatment triggers the body&apos;s natural repair response for
+          smoother, more youthful-looking skin.
+        </p>
+
+        <h3 className="fd" style={{ fontSize: 22, fontWeight: 700, color: "var(--gd)", marginBottom: 10 }}>
+          Dermal Fillers
+        </h3>
+        <p>
+          Injectable dermal fillers restore lost volume to the hands, reducing the visibility of tendons, veins, and
+          bony structures. Dr. Mehta carefully injects filler beneath the skin to create a smoother, more supple
+          appearance. Results are immediate and can last up to a year or longer depending on the product used.
+        </p>
+      </ProseSection>
 
       <section style={{ background: "var(--ow)", padding: "100px 0" }}>
         <div className="mx-lg" style={{ maxWidth: 1080 }}>

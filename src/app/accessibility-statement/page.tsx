@@ -3,11 +3,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
+const TITLE = "Accessibility Statement | Oasis Vein & Vitality";
+const DESCRIPTION =
+  "Oasis Vein & Vitality is partially conformant with WCAG 2.1 AA. Read our accessibility statement and report any barriers you encounter.";
+
 export const metadata: Metadata = {
-  title: "Accessibility Statement | Oasis Vein & Vitality",
-  description:
-    "Accessibility statement for Oasis Vein & Vitality. We are partially conformant with WCAG 2.1 level AA and welcome feedback on the accessibility of our site.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/accessibility-statement" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/accessibility-statement" },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 export default function AccessibilityStatementPage() {

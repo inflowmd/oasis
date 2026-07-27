@@ -26,9 +26,34 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Oasis Longevity Medicine | Dr. Steven Mehta | Scottsdale, AZ",
+  metadataBase: new URL("https://oasisvv.com"),
+  title: "Longevity Medicine in Scottsdale, AZ | Dr. Steven Mehta",
   description:
-    "Physician-led longevity medicine grounded in cardiovascular science. Precision diagnostics and prevention in Scottsdale, AZ with Dr. Steven Mehta, MD, MBA, FACC.",
+    "Physician-led longevity medicine grounded in cardiovascular science. Precision diagnostics and prevention with Dr. Steven Mehta in Scottsdale and Prescott, AZ.",
+  icons: {
+    icon: [
+      { url: "/logo.webp", type: "image/webp" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/logo.webp",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Oasis Vein & Vitality",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Oasis Vein & Vitality — Longevity Medicine",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({

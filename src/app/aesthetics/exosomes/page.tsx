@@ -3,12 +3,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { AestheticsHero, AestheticsCTA, ProseSection, Benefits } from "@/components/AestheticsShell";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/aesthetics/exosomes";
+const TITLE = "Exosome Therapy Scottsdale | Skin Rejuvenation";
+const DESCRIPTION =
+  "Exosomes promote skin rejuvenation and repair at the cellular level. Non-surgical, regenerative aesthetic treatment in Scottsdale, AZ with Dr. Steven Mehta.";
 
 export const metadata: Metadata = {
-  title: "Exosomes for Skin Rejuvenation | Oasis Vein & Vitality | Scottsdale",
-  description:
-    "Exosomes promote skin rejuvenation and repair on a cellular level. Non-surgical, naturally regenerative aesthetic treatment with Dr. Steven Mehta in Scottsdale, AZ.",
-  alternates: { canonical: "/aesthetics/exosomes" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const benefits = [
@@ -26,7 +33,24 @@ const benefits = [
   },
 ];
 
+const beneficiaries = [
+  "Fine lines and wrinkles",
+  "Sun-damaged skin",
+  "Uneven skin tone",
+  "Loss of skin firmness and elasticity",
+  "Acne scarring",
+  "Enlarged pores",
+  "Dull or dehydrated skin",
+  "Post-procedure healing acceleration",
+  "Age-related skin thinning",
+  "Hair loss and thinning hair",
+];
+
 const faqs = [
+  {
+    q: "How many sessions will I need?",
+    a: "Results vary by individual, but many patients benefit from a series of 3-4 sessions spaced 4-6 weeks apart. Because exosome therapy works at the cellular level, benefits continue to improve over several months and can last 18-24 months or longer.",
+  },
   {
     q: "What are exosomes?",
     a: "Exosomes are tiny vesicles naturally produced by cells in the body. They play a key role in cell-to-cell communication, carrying proteins, growth factors and other molecules that help target cells repair and regenerate.",
@@ -48,6 +72,7 @@ const faqs = [
 export default function ExosomesPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Regenerative Medicine" />
       <Navbar />
 
       <AestheticsHero
@@ -88,6 +113,66 @@ export default function ExosomesPage() {
           as cell regeneration occurs and the body produces new collagen and elastin.
         </p>
       </ProseSection>
+
+      <section style={{ background: "var(--tl)", padding: "100px 0" }}>
+        <div className="mx-lg" style={{ maxWidth: 1080 }}>
+          <p
+            style={{
+              fontSize: 12,
+              fontWeight: 700,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "var(--gold)",
+              marginBottom: 16,
+            }}
+          >
+            Who Can Benefit
+          </p>
+          <h2 className="fd" style={{ fontSize: "clamp(28px,3vw,42px)", fontWeight: 700, color: "var(--td)", lineHeight: 1.15, marginBottom: 32 }}>
+            Conditions exosome therapy <span className="fdi" style={{ color: "var(--gm)" }}>can address.</span>
+          </h2>
+          <ul
+            className="g2"
+            style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}
+          >
+            {beneficiaries.map((t) => (
+              <li
+                key={t}
+                style={{
+                  display: "flex",
+                  gap: 14,
+                  alignItems: "flex-start",
+                  padding: "16px 18px",
+                  background: "#fff",
+                  border: "1px solid rgba(232,237,232,0.6)",
+                  borderRadius: 14,
+                }}
+              >
+                <span
+                  aria-hidden
+                  style={{
+                    flexShrink: 0,
+                    width: 22,
+                    height: 22,
+                    borderRadius: "50%",
+                    background: "var(--gold-pale)",
+                    border: "1px solid rgba(201,169,110,0.25)",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginTop: 2,
+                  }}
+                >
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="var(--gold)" />
+                  </svg>
+                </span>
+                <span style={{ fontSize: 15, color: "var(--gd)", lineHeight: 1.55 }}>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <section style={{ background: "var(--ow)", padding: "100px 0" }}>
         <div className="mx-sm" style={{ maxWidth: 1080 }}>

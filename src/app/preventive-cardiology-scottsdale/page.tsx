@@ -6,11 +6,16 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JoinPrompt from "@/components/JoinPrompt";
 
+const TITLE = "Preventive Cardiology Scottsdale | Dr. Steven Mehta";
+const DESCRIPTION =
+  "The heart of longevity. 80% of cardiovascular disease is preventable. Interventional cardiologist Dr. Mehta now applies decades of experience to prevention.";
+
 export const metadata: Metadata = {
-  title: "Preventive Cardiology in Scottsdale | Cardiologist-Led | Oasis Longevity",
-  description:
-    "Cardiovascular disease is the leading cause of death — and 80% of it is preventable. Inside the philosophy of preventive cardiology with Dr. Steven Mehta, double board-certified cardiologist in Scottsdale, AZ.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/preventive-cardiology-scottsdale" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/preventive-cardiology-scottsdale" },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 export default function PreventiveCardiologyScottsdale() {

@@ -5,16 +5,60 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JoinPrompt from "@/components/JoinPrompt";
+import JsonLd from "@/components/JsonLd";
+
+const TITLE = "Dr. Steven Mehta, MD | Cardiologist & Longevity Physician";
+const DESCRIPTION =
+  "Meet Dr. Steven Mehta — double board-certified cardiologist, ACC Arizona Governor, and founder of the Oasis Longevity Program in Scottsdale and Prescott, AZ.";
 
 export const metadata: Metadata = {
-  title: "About Dr. Steven Mehta | Cardiologist & Longevity Physician | Scottsdale",
-  description:
-    "From the cath lab to longevity medicine. The story behind Dr. Steven Mehta — double board-certified cardiologist, ACC Governor for Arizona, and founder of the Oasis Longevity Program in Scottsdale, AZ.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/about" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/about" },
+  twitter: { title: TITLE, description: DESCRIPTION },
+};
+
+const physician = {
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  name: "Dr. Steven S. Mehta",
+  description:
+    "Double board-certified cardiologist and longevity physician in Scottsdale and Prescott, AZ.",
+  url: "https://oasisvv.com/about",
+  image: "https://oasisvv.com/ssmehta.jpg",
+  telephone: "+14807207044",
+  medicalSpecialty: ["Cardiovascular Disease", "Internal Medicine"],
+  memberOf: {
+    "@type": "MedicalOrganization",
+    name: "American College of Cardiology",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "7659 E. Pinnacle Peak Rd, Suite 110",
+    addressLocality: "Scottsdale",
+    addressRegion: "AZ",
+    postalCode: "85255",
+    addressCountry: "US",
+  },
+  qualification: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Board Certification",
+      name: "Cardiovascular Disease — American Board of Internal Medicine",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Board Certification",
+      name: "Internal Medicine — American Board of Internal Medicine",
+    },
+  ],
 };
 
 const milestones = [
-  { era: "Medical School & Residency", body: "Foundational training in internal medicine — the rigor that shapes every clinical instinct." },
+  { era: "Kent State University", body: "Undergraduate education in Ohio — the start of a long path through medicine." },
+  { era: "Northeastern Ohio Medical University", body: "Medical school and Internal Medicine residency — the rigor that shapes every clinical instinct." },
+  { era: "Cardiovascular Disease Fellowship", body: "University of Louisville. The foundation of his cardiology training." },
   { era: "Interventional Cardiology Fellowship", body: "Arizona Heart Institute. Trained in the most technically demanding procedures in cardiovascular medicine." },
   { era: "Director of Cardiovascular Intervention", body: "Years on the front line of advanced atherosclerotic disease." },
   { era: "Chief of Medical Staff & CMO", body: "Hospital-system leadership. Responsibility for the quality and culture of cardiovascular care." },
@@ -26,6 +70,7 @@ const milestones = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={physician} />
       <Navbar />
 
       {/* HERO — wide cinematic */}
@@ -508,12 +553,14 @@ export default function AboutPage() {
           </div>
           <div style={{ fontSize: 18, color: "var(--tm)", lineHeight: 1.8, maxWidth: 680 }}>
             <p style={{ marginBottom: 18 }}>
-              Music is still part of the daily picture — listening, playing, paying attention to ensembles in the way
-              that first taught him how to be present. He says the discipline of music made him a better physician.
+              Music is still part of the daily picture — he plays bass guitar in local bands, listens with intent, and
+              pays attention to ensembles in the way that first taught him how to be present. He says the discipline
+              of music made him a better physician.
             </p>
             <p style={{ marginBottom: 18 }}>
-              He&apos;s a husband and father. He applies the same principles to his own health that he asks of his
-              patients — not because he has to, but because the model works in both directions.
+              He and his wife have twin daughters. The family skis together, keeps a small menagerie of animals at
+              home, and applies the same principles to their own health that Dr. Mehta asks of his patients — not
+              because he has to, but because the model works in both directions.
             </p>
             <p>
               Outside of clinic and family, the throughline is the same: a quiet curiosity about how systems work,

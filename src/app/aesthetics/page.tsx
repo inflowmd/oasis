@@ -3,12 +3,19 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AestheticsHero, AestheticsCTA } from "@/components/AestheticsShell";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/aesthetics";
+const TITLE = "Vein & Aesthetic Services | Oasis Vein & Vitality";
+const DESCRIPTION =
+  "Gold-standard vein and aesthetic treatments delivering fast, long-lasting results without surgery or downtime. Dr. Steven Mehta in Scottsdale and Prescott, AZ.";
 
 export const metadata: Metadata = {
-  title: "Vein & Aesthetic Services | Oasis Vein & Vitality | Scottsdale",
-  description:
-    "In addition to our longevity medicine program, Oasis Vein and Vitality uses the gold standard in aesthetic technology to deliver fast, long-lasting results without surgery or downtime.",
-  alternates: { canonical: "/aesthetics" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const services = [
@@ -47,6 +54,7 @@ const services = [
 export default function AestheticsOverviewPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Internal Medicine" />
       <Navbar />
 
       <AestheticsHero

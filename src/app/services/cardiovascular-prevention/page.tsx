@@ -5,12 +5,19 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { ServiceHero, ServiceCTA, SectionTitle } from "@/components/ServiceShell";
 import JoinPrompt from "@/components/JoinPrompt";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/services/cardiovascular-prevention";
+const TITLE = "Cardiovascular Prevention Scottsdale | Dr. Mehta";
+const DESCRIPTION =
+  "Decades of interventional cardiology applied to prevention. Early detection and personalized cardiovascular care with Dr. Mehta in Scottsdale, AZ.";
 
 export const metadata: Metadata = {
-  title: "Cardiovascular Prevention | Cardiologist-Led | Oasis Longevity Scottsdale",
-  description:
-    "Decades of interventional cardiology experience, applied to prevention. Dr. Steven Mehta works to ensure his patients never reach the cath lab — through early detection, personalized intervention, and longitudinal monitoring.",
-  alternates: { canonical: "/services/cardiovascular-prevention" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const pillars = [
@@ -56,6 +63,7 @@ const faqs = [
 export default function CardiovascularPreventionPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Cardiovascular" />
       <Navbar />
 
       <ServiceHero

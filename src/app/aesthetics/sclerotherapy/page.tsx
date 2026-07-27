@@ -3,12 +3,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { AestheticsHero, AestheticsCTA, ProseSection, Benefits } from "@/components/AestheticsShell";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/aesthetics/sclerotherapy";
+const TITLE = "Sclerotherapy Scottsdale | Spider Vein Treatment";
+const DESCRIPTION =
+  "Eliminate spider and small varicose veins with proven, virtually painless sclerotherapy in Scottsdale, AZ. No downtime, fast results with Dr. Steven Mehta.";
 
 export const metadata: Metadata = {
-  title: "Sclerotherapy | Spider Vein Treatment | Oasis Vein & Vitality | Scottsdale",
-  description:
-    "Rid your face, hands, body, legs or feet of small varicose and spider veins with this proven, virtually painless treatment from Dr. Steven Mehta in Scottsdale, AZ.",
-  alternates: { canonical: "/aesthetics/sclerotherapy" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const benefits = [
@@ -44,6 +51,7 @@ const faqs = [
 export default function SclerotherapyPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Internal Medicine" />
       <Navbar />
 
       <AestheticsHero

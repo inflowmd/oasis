@@ -6,12 +6,18 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
 import JoinPrompt from "@/components/JoinPrompt";
+import JsonLd from "@/components/JsonLd";
+
+const TITLE = "The Oasis Longevity Program | Scottsdale & Prescott";
+const DESCRIPTION =
+  "An ongoing, physician-led longevity program built around your biology and goals. Comprehensive diagnostics and personalized prevention with Dr. Steven Mehta.";
 
 export const metadata: Metadata = {
-  title: "The Oasis Longevity Program | Dr. Steven Mehta | Scottsdale",
-  description:
-    "An ongoing physician-patient relationship built around your biology, your goals, and your life. Discover how Dr. Steven Mehta's longevity practice is designed to optimize your health.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/program" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/program" },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const phases = [
@@ -100,9 +106,20 @@ const faqs = [
   },
 ];
 
+const faqPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function ProgramPage() {
   return (
     <>
+      <JsonLd data={faqPageSchema} />
       <Navbar />
 
       {/* HERO */}

@@ -5,12 +5,19 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { ServiceHero, ServiceCTA, SectionTitle } from "@/components/ServiceShell";
 import JoinPrompt from "@/components/JoinPrompt";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/services/hormone-optimization";
+const TITLE = "Hormone Optimization Scottsdale | Cardiologist-Led";
+const DESCRIPTION =
+  "Bioidentical hormone optimization with cardiovascular safety oversight in Scottsdale, AZ. Restore vitality and protect long-term health with Dr. Steven Mehta.";
 
 export const metadata: Metadata = {
-  title: "Hormone Optimization in Scottsdale | Cardiologist-Led | Oasis Longevity",
-  description:
-    "Bioidentical hormone optimization with cardiovascular safety oversight. Restore vitality, protect long-term health, and slow age-related decline — under the guidance of a board-certified cardiologist.",
-  alternates: { canonical: "/services/hormone-optimization" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const faqs = [
@@ -50,6 +57,7 @@ const pillars = [
 export default function HormoneOptimizationPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Endocrinology" />
       <Navbar />
 
       <ServiceHero

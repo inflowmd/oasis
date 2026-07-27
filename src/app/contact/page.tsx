@@ -5,11 +5,16 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ApplicationForm from "@/components/ApplicationForm";
 
+const TITLE = "Join Our Practice | Contact Oasis Vein & Vitality";
+const DESCRIPTION =
+  "Inquire about joining Dr. Steven Mehta's longevity practice in Scottsdale and Prescott, AZ. Limited enrollment — every inquiry is reviewed personally.";
+
 export const metadata: Metadata = {
-  title: "Join Our Practice | Oasis Longevity Medicine",
-  description:
-    "Inquire about joining Dr. Steven Mehta's longevity practice. Limited enrollment — every inquiry is reviewed personally. Scottsdale & Prescott, Arizona.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/contact" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/contact" },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 export default function ContactPage() {

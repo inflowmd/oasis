@@ -5,12 +5,19 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { ServiceHero, ServiceCTA, SectionTitle } from "@/components/ServiceShell";
 import JoinPrompt from "@/components/JoinPrompt";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/services/weight-management";
+const TITLE = "Medical Weight Management Scottsdale | Dr. Mehta";
+const DESCRIPTION =
+  "Physician-supervised weight and body-composition management in Scottsdale, AZ. Addresses metabolism and cardiovascular health — not a quick fix.";
 
 export const metadata: Metadata = {
-  title: "Medical Weight Management | Cardiologist-Led | Oasis Longevity Scottsdale",
-  description:
-    "Sustainable body composition optimization guided by a board-certified cardiologist. A medically supervised approach to weight that addresses metabolism, hormones, and cardiovascular health — not a quick fix.",
-  alternates: { canonical: "/services/weight-management" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const faqs = [
@@ -50,6 +57,7 @@ const blocks = [
 export default function WeightManagementPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Internal Medicine" />
       <Navbar />
 
       <ServiceHero

@@ -3,12 +3,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { AestheticsHero, AestheticsCTA, ProseSection, Benefits } from "@/components/AestheticsShell";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/aesthetics/varicose-veins";
+const TITLE = "Varicose Vein Treatment Scottsdale | VenaSeal & RFA";
+const DESCRIPTION =
+  "Minimally invasive varicose vein treatment in Scottsdale — VenaSeal, radiofrequency ablation, Varithena and phlebectomy with vein expert Dr. Steven Mehta.";
 
 export const metadata: Metadata = {
-  title: "Varicose Veins Treatment | Oasis Vein & Vitality | Scottsdale",
-  description:
-    "Regain comfort and confidence with state-of-the-art, minimally invasive varicose vein treatments — VenaSeal and radiofrequency ablation with Dr. Steven Mehta in Scottsdale, AZ.",
-  alternates: { canonical: "/aesthetics/varicose-veins" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const benefits = [
@@ -27,6 +34,18 @@ const benefits = [
 ];
 
 const faqs = [
+  {
+    q: "What are the signs and symptoms of vein disease?",
+    a: "Common signs include visible varicose or spider veins, leg aching or heaviness, leg cramps (especially at night), swelling in the legs or ankles, restless legs, skin discoloration near the ankles, and slow-healing wounds on the legs. If you experience any of these symptoms, a vein evaluation can determine if treatment is needed.",
+  },
+  {
+    q: "What are the risk factors for varicose veins?",
+    a: "Risk factors include family history (you have about a 40% chance if one parent has vein disease and up to 90% if both do), gender (about 25% of women and 15% of men are affected), pregnancy, occupations requiring prolonged standing or sitting, obesity, and age (1 in 2 people over 50 develop varicose veins).",
+  },
+  {
+    q: "What happens during a vein evaluation?",
+    a: "Dr. Mehta will discuss your symptoms and medical history, then perform an in-office venous ultrasound examination. This painless, non-invasive imaging test uses sound waves to evaluate blood flow in your leg veins and identify any malfunctioning valves or diseased vein segments. Results are available immediately so Dr. Mehta can discuss your treatment options the same day.",
+  },
   {
     q: "Is varicose vein treatment safe?",
     a: "Yes. The minimally invasive treatments offered at Oasis Vein and Vitality are FDA-approved and well-established, with strong safety records. Dr. Mehta is a board-certified cardiologist with extensive experience in vein disease.",
@@ -52,6 +71,7 @@ const faqs = [
 export default function VaricoseVeinsPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Internal Medicine" />
       <Navbar />
 
       <AestheticsHero
@@ -113,6 +133,34 @@ export default function VaricoseVeinsPage() {
         <p>
           Over time, the treated vein will be reabsorbed by the body. Since blood flow gets rerouted to nearby healthy
           veins, your circulation will become more efficient and your symptoms will improve.
+        </p>
+      </ProseSection>
+
+      <ProseSection
+        eyebrow="Varithena®"
+        title="Polidocanol"
+        italicTail="injectable foam."
+      >
+        <p>
+          Varithena is an FDA-approved injectable foam used to treat varicose veins. Dr. Mehta injects a small amount
+          of microfoam into the malfunctioning vein through a catheter or needle. The foam fills and treats the vein,
+          causing it to collapse and eventually be absorbed by the body. Blood is rerouted to nearby healthy veins.
+          Varithena is particularly effective for large, tortuous veins that may not be ideal candidates for thermal
+          ablation.
+        </p>
+      </ProseSection>
+
+      <ProseSection
+        eyebrow="Ambulatory Phlebectomy"
+        title="Micro-incision"
+        italicTail="vein removal."
+        background="var(--tl)"
+      >
+        <p>
+          Ambulatory phlebectomy is a minimally invasive procedure used to remove superficial varicose veins through
+          tiny micro-incisions in the skin. Dr. Mehta uses local anesthesia to numb the area, then removes the
+          varicose vein segments through punctures so small they typically don&apos;t require stitches. The procedure
+          is performed in-office and patients can return to normal activities quickly.
         </p>
       </ProseSection>
 

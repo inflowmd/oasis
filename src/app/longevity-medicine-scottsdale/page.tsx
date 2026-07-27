@@ -5,11 +5,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
+const TITLE = "Longevity Medicine Scottsdale | Cardiologist-Led";
+const DESCRIPTION =
+  "What longevity medicine is, who it's for, and why your doctor's credentials matter. Cardiologist-led longevity care in Scottsdale and Prescott, AZ.";
+
 export const metadata: Metadata = {
-  title: "Longevity Medicine in Scottsdale | Cardiologist-Led | Oasis Longevity",
-  description:
-    "What longevity medicine actually is, who it's for, and why your physician's credentials matter more than you think. A primer on cardiologist-led longevity care in Scottsdale, AZ.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/longevity-medicine-scottsdale" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/longevity-medicine-scottsdale" },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 export default function LongevityMedicineScottsdale() {

@@ -3,11 +3,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
+const TITLE = "Privacy Policy | Oasis Vein & Vitality";
+const DESCRIPTION =
+  "How Oasis Vein & Vitality collects, uses, shares and protects information gathered through our website. Read our full privacy policy.";
+
 export const metadata: Metadata = {
-  title: "Privacy Policy | Oasis Vein & Vitality",
-  description:
-    "Privacy policy for oasisvv.com. How we collect, use, share, and protect information collected through this website.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/privacy-policy" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/privacy-policy" },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const h2Style: React.CSSProperties = {

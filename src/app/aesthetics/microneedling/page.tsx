@@ -3,12 +3,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { AestheticsHero, AestheticsCTA, ProseSection, Benefits } from "@/components/AestheticsShell";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/aesthetics/microneedling";
+const TITLE = "RF Microneedling Scottsdale | Sylfirm X Treatment";
+const DESCRIPTION =
+  "Smoother, even-toned skin with Sylfirm X RF microneedling in Scottsdale, AZ. Treats melasma, scars, fine lines and laxity through collagen stimulation.";
 
 export const metadata: Metadata = {
-  title: "Microneedling — Sylfirm X® RF | Oasis Vein & Vitality | Scottsdale",
-  description:
-    "Smoother, more youthful, even-toned skin with Sylfirm X® radiofrequency microneedling — collagen stimulation and skin rejuvenation in Scottsdale, AZ.",
-  alternates: { canonical: "/aesthetics/microneedling" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const benefits = [
@@ -26,7 +33,26 @@ const benefits = [
   },
 ];
 
+const treats = [
+  "Fine lines and wrinkles",
+  "Skin laxity and sagging",
+  "Acne scars",
+  "Surgical scars",
+  "Stretch marks",
+  "Melasma and hyperpigmentation",
+  "Rosacea",
+  "Uneven skin tone and texture",
+  "Enlarged pores",
+  "Sun damage",
+  "Dull or aging skin",
+  "Scalp rejuvenation (stimulates circulation for hair health)",
+];
+
 const faqs = [
+  {
+    q: "How many treatments will I need?",
+    a: "Most patients see optimal results after 3-4 treatments spaced 4-6 weeks apart. Dr. Mehta will recommend a treatment plan based on your specific skin concerns and goals. Many patients choose to do maintenance treatments once or twice a year to sustain results.",
+  },
   {
     q: "How does Sylfirm X treatment work?",
     a: "Microneedling helps to resurface the skin and stimulate the body's natural repair response by creating micro-injuries. RF energy simultaneously heats tissue for a tightening and contouring effect. The treatment triggers collagen and elastin production, providing results that continue to get better over weeks and months.",
@@ -48,6 +74,7 @@ const faqs = [
 export default function MicroneedlingPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Dermatology" />
       <Navbar />
 
       <AestheticsHero
@@ -84,6 +111,66 @@ export default function MicroneedlingPage() {
           days. Many patients notice a skin tightening effect right away with full results visible in about a month.
         </p>
       </ProseSection>
+
+      <section style={{ background: "var(--tl)", padding: "100px 0" }}>
+        <div className="mx-lg" style={{ maxWidth: 1080 }}>
+          <p
+            style={{
+              fontSize: 12,
+              fontWeight: 700,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "var(--gold)",
+              marginBottom: 16,
+            }}
+          >
+            What It Treats
+          </p>
+          <h2 className="fd" style={{ fontSize: "clamp(28px,3vw,42px)", fontWeight: 700, color: "var(--td)", lineHeight: 1.15, marginBottom: 32 }}>
+            What can RF microneedling <span className="fdi" style={{ color: "var(--gm)" }}>treat?</span>
+          </h2>
+          <ul
+            className="g2"
+            style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}
+          >
+            {treats.map((t) => (
+              <li
+                key={t}
+                style={{
+                  display: "flex",
+                  gap: 14,
+                  alignItems: "flex-start",
+                  padding: "16px 18px",
+                  background: "#fff",
+                  border: "1px solid rgba(232,237,232,0.6)",
+                  borderRadius: 14,
+                }}
+              >
+                <span
+                  aria-hidden
+                  style={{
+                    flexShrink: 0,
+                    width: 22,
+                    height: 22,
+                    borderRadius: "50%",
+                    background: "var(--gold-pale)",
+                    border: "1px solid rgba(201,169,110,0.25)",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginTop: 2,
+                  }}
+                >
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="var(--gold)" />
+                  </svg>
+                </span>
+                <span style={{ fontSize: 15, color: "var(--gd)", lineHeight: 1.55 }}>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <section style={{ background: "var(--ow)", padding: "100px 0" }}>
         <div className="mx-sm" style={{ maxWidth: 1080 }}>

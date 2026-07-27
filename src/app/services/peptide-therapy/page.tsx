@@ -6,12 +6,19 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { ServiceHero, ServiceCTA, SectionTitle } from "@/components/ServiceShell";
 import JoinPrompt from "@/components/JoinPrompt";
+import MedicalWebPageSchema from "@/components/MedicalWebPageSchema";
+
+const SLUG = "/services/peptide-therapy";
+const TITLE = "Peptide Therapy Scottsdale | Physician-Directed";
+const DESCRIPTION =
+  "Targeted peptide protocols prescribed and monitored by a board-certified cardiologist. Medical-grade compounds from FDA-certified labs in Scottsdale, AZ.";
 
 export const metadata: Metadata = {
-  title: "Peptide Therapy | Physician-Directed | Oasis Longevity Scottsdale",
-  description:
-    "Targeted peptide protocols prescribed and monitored by a board-certified cardiologist. Medical-grade compounds from FDA-certified labs — not the unregulated wellness-spa market.",
-  alternates: { canonical: "/services/peptide-therapy" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: SLUG },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: SLUG },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 type App = { title: string; body: string; icon: ReactNode };
@@ -88,6 +95,7 @@ const faqs = [
 export default function PeptideTherapyPage() {
   return (
     <>
+      <MedicalWebPageSchema slug={SLUG} title={TITLE} description={DESCRIPTION} specialty="Endocrine" />
       <Navbar />
 
       <ServiceHero
