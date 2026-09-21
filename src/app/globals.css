@@ -599,12 +599,32 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.45);
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.25s;
   white-space: nowrap;
 }
-.sl.active { color: var(--gold); }
+.sl.active { color: var(--gold); font-weight: 700; }
+
+/* Story sidebar — real buttons so hover, active, and keyboard focus all read as interactive */
+.sn-item {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 12px 12px 12px 16px;
+  background: transparent;
+  border: none;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 6px 6px 0;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+.sn-item:not(.active):hover { border-left-color: rgba(255, 255, 255, 0.4); background-color: rgba(255, 255, 255, 0.04); }
+.sn-item:not(.active):hover .sl { color: rgba(255, 255, 255, 0.85); }
+.sn-item.active { border-left-color: var(--gold); background-color: rgba(201, 169, 110, 0.1); }
+.sn-item:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
 .chk {
   width: 20px;

@@ -11,29 +11,56 @@ const phrases = [
   "optimize how you feel and perform.",
 ];
 
+const TYPE_MS = 45;
+const DELETE_MS = 22;
+const HOLD_MS = 1800;
+const GAP_MS = 250;
+// The last phrase completes the sentence — rest on it before starting over.
+const FINAL_HOLD_MS = 10000;
+
 export default function Hero() {
   const typedRef = useRef<HTMLSpanElement>(null);
+  const cursorRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    let pi = 0, ci = 0, del = false;
-    let timer: ReturnType<typeof setTimeout>;
     const el = typedRef.current;
+    const cursor = cursorRef.current;
     if (!el) return;
+    const last = phrases.length - 1;
+    // visibility, not opacity: the blink keyframes own the cursor's opacity.
+    const showCursor = (on: boolean) => { if (cursor) cursor.style.visibility = on ? "" : "hidden"; };
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.textContent = phrases[last];
+      showCursor(false);
+      return;
+    }
+
+    // Server markup already renders phrases[0] in full, so hold it instead of wiping and retyping it.
+    let pi = 0, ci = phrases[0].length, del = true;
+    let timer: ReturnType<typeof setTimeout>;
     const tick = () => {
       const p = phrases[pi];
       if (!del) {
         ci++;
         el.textContent = p.substring(0, ci);
-        if (ci === p.length) { del = true; timer = setTimeout(tick, 3800); return; }
-        timer = setTimeout(tick, 55);
+        if (ci === p.length) {
+          del = true;
+          const final = pi === last;
+          if (final) showCursor(false);
+          timer = setTimeout(tick, final ? FINAL_HOLD_MS : HOLD_MS);
+          return;
+        }
+        timer = setTimeout(tick, TYPE_MS);
       } else {
+        if (ci === p.length) showCursor(true);
         ci--;
         el.textContent = p.substring(0, ci);
-        if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; timer = setTimeout(tick, 400); return; }
-        timer = setTimeout(tick, 25);
+        if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; timer = setTimeout(tick, GAP_MS); return; }
+        timer = setTimeout(tick, DELETE_MS);
       }
     };
-    tick();
+    timer = setTimeout(tick, HOLD_MS);
     return () => clearTimeout(timer);
   }, []);
 
@@ -56,7 +83,7 @@ export default function Hero() {
           <p style={{ fontSize: "clamp(17px,1.3vw,20px)", fontWeight: 400, lineHeight: 1.7, color: "var(--tm)", marginBottom: 14, maxWidth: 460 }}>
             Precision diagnostics and cardiovascular prevention designed to{" "}
             <span ref={typedRef} id="typed" style={{ color: "var(--gd)", fontWeight: 500 }}>extend your healthspan.</span>
-            <span className="tw-cursor" />
+            <span ref={cursorRef} className="tw-cursor" />
           </p>
           <div className="glass-doc" style={{ display: "inline-flex", alignItems: "center", gap: 14, marginBottom: 28, background: "rgba(255,255,255,0.55)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.85)", boxShadow: "0 4px 20px rgba(28,53,56,0.04)", borderRadius: 16, padding: "16px 22px" }}>
             <div style={{ width: 1, height: 36, background: "var(--gold)", opacity: 0.4 }} />

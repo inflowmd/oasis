@@ -71,15 +71,24 @@ const creds: Cred[] = [
   },
 ];
 
+// Longest panel runs ~54 words; 18s is a comfortable read at ~180 wpm.
+const ADVANCE_MS = 18000;
+
 export default function Story() {
   const [si, setSi] = useState(0);
-  const [barKey, setBarKey] = useState(0);
+  // Once a reader picks a panel, stop advancing so they aren't pulled forward mid-sentence.
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    setBarKey((k) => k + 1);
-    const t = setTimeout(() => setSi((i) => (i + 1) % stories.length), 8000);
+    if (paused) return;
+    const t = setTimeout(() => setSi((i) => (i + 1) % stories.length), ADVANCE_MS);
     return () => clearTimeout(t);
-  }, [si]);
+  }, [si, paused]);
+
+  const select = (i: number) => {
+    setSi(i);
+    setPaused(true);
+  };
 
   const current = stories[si];
   const paragraphs = current.text.split("\n\n");
@@ -103,13 +112,15 @@ export default function Story() {
         <div className="sf" style={{ display: "flex", gap: 60, alignItems: "flex-start", maxWidth: 1280, margin: "0 auto" }}>
           <div className="sns" style={{ width: 200, flexShrink: 0, position: "sticky", top: 100 }}>
             {stories.map((s, i) => (
-              <div
+              <button
                 key={i}
-                onClick={() => setSi(i)}
-                style={{ padding: "12px 0", cursor: "pointer", borderLeft: `2px solid ${i === si ? "var(--gold)" : "rgba(255,255,255,0.06)"}`, paddingLeft: 16 }}
+                type="button"
+                onClick={() => select(i)}
+                aria-current={i === si ? "true" : undefined}
+                className={`sn-item${i === si ? " active" : ""}`}
               >
                 <span className={`sl${i === si ? " active" : ""}`}>{s.label}</span>
-              </div>
+              </button>
             ))}
           </div>
           <div style={{ flex: 1, position: "relative" }}>
@@ -125,16 +136,20 @@ export default function Story() {
               ))}
             </div>
             <div style={{ marginTop: 32, position: "relative", height: 3, background: "rgba(255,255,255,0.06)", borderRadius: 3, overflow: "hidden" }}>
-              <div key={barKey} className="story-progress" style={{ animation: "fillBar 8s linear forwards" }} />
+              {!paused && <div key={si} className="story-progress" style={{ animation: `fillBar ${ADVANCE_MS}ms linear forwards` }} />}
             </div>
             <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 16 }}>
-              {stories.map((_, i) => (
-                <div
+              {stories.map((s, i) => (
+                <button
                   key={i}
-                  onClick={() => setSi(i)}
+                  type="button"
+                  aria-label={`Show ${s.label}`}
+                  aria-current={i === si ? "true" : undefined}
+                  onClick={() => select(i)}
                   style={{
                     width: 10,
                     height: 10,
+                    padding: 0,
                     borderRadius: "50%",
                     border: `2px solid ${i === si ? "var(--gold)" : "rgba(255,255,255,0.12)"}`,
                     background: i === si ? "var(--gold)" : "transparent",
