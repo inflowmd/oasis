@@ -38,7 +38,7 @@ export default function Footer() {
           <FooterCol heading="Pages">
             <FooterLink href="/">Home</FooterLink>
             <FooterLink href="/about">About Dr. Mehta</FooterLink>
-            <FooterLink href="/program">The Program</FooterLink>
+            <FooterLink href="/program">How It Works</FooterLink>
             {/* <FooterLink href="/blog">Blog</FooterLink> hidden until blog content is ready */}
             <FooterLink href="/contact">Join Our Practice</FooterLink>
           </FooterCol>

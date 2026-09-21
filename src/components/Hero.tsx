@@ -7,8 +7,8 @@ const phrases = [
   "extend your healthspan.",
   "stop disease before it starts.",
   "keep your mind sharp and energy high.",
-  "help you live better, not just longer.",
   "optimize how you feel and perform.",
+  "help you live better, not just longer.",
 ];
 
 const TYPE_MS = 45;
