@@ -26,7 +26,7 @@ const physician = {
   description:
     "Double board-certified cardiologist and longevity physician in Scottsdale and Prescott, AZ.",
   url: "https://oasisvv.com/about",
-  image: "https://oasisvv.com/ssmehta.jpg",
+  image: "https://oasisvv.com/dr-steven-mehta-longevity-cardiologist-scottsdale.webp",
   telephone: "+14807207044",
   medicalSpecialty: ["Cardiovascular Disease", "Internal Medicine"],
   memberOf: {
@@ -107,7 +107,7 @@ export default function AboutPage() {
               }}
             >
               <Image
-                src="/ssmehta.jpg"
+                src="/dr-steven-mehta-longevity-cardiologist-scottsdale.webp"
                 alt="Dr. Steven Mehta — Board-Certified Cardiologist & Longevity Physician"
                 fill
                 priority

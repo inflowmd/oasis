@@ -231,8 +231,8 @@ export default async function BlogPostPage({
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/ssmehta.jpg"
-                alt="Dr. Steven Mehta"
+                src="/dr-steven-mehta-longevity-cardiologist-scottsdale.webp"
+                alt="Dr. Steven Mehta, MD, MBA, FACC — Board-Certified Cardiologist & Longevity Physician, Scottsdale AZ"
                 style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
               />
             </div>

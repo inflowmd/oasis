@@ -84,8 +84,8 @@ export default function ContactPage() {
             }}
           >
             <Image
-              src="/ssmehta.jpg"
-              alt="Dr. Steven Mehta"
+              src="/dr-steven-mehta-longevity-cardiologist-scottsdale.webp"
+              alt="Dr. Steven Mehta, MD, MBA, FACC — Board-Certified Cardiologist & Longevity Physician, Scottsdale AZ"
               fill
               sizes="(max-width: 900px) 100vw, 540px"
               className="object-cover object-top"

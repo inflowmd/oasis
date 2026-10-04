@@ -101,7 +101,7 @@ export default function Hero() {
         <div className="hr" style={{ width: "clamp(300px,38%,460px)", flexShrink: 0 }}>
           <div style={{ position: "relative", width: "100%", aspectRatio: "4/5", borderRadius: 24, overflow: "hidden", background: "linear-gradient(180deg,var(--gl),var(--gp))", border: "1px solid rgba(232,237,232,0.3)" }}>
             <Image
-              src="/ssmehta.jpg"
+              src="/dr-steven-mehta-longevity-cardiologist-scottsdale.webp"
               alt="Dr. Steven Mehta — Board-Certified Cardiologist & Longevity Physician"
               fill
               priority
