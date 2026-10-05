@@ -65,7 +65,10 @@ export default function PrivacyPolicyPage() {
             <h2 className="fd" style={h2Style}>Information Collection, Use, and Sharing</h2>
             <p>
               We are the sole owners of the information collected on this site. We only have access to/collect
-              information that you voluntarily give us via email or other direct contact from you. We will not sell or
+              information that you voluntarily give us via email, through forms on this website, or other direct contact
+              from you. Information submitted through forms on this site is collected and processed on our behalf by
+              Cognito Forms, a HIPAA-compliant third-party form provider operating under a Business Associate
+              Agreement. We will not sell or
               rent this information to anyone. We will use your information to respond to you, regarding the reason
               you contacted us. Unless you ask us not to, we may contact you via email in the future to tell you about
               specials, new products or services, or changes to this privacy policy.
