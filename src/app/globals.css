@@ -785,7 +785,6 @@ a { text-decoration: none; color: inherit; }
   .cv-grid { grid-template-columns: 1fr !important; }
   .loc-grid { grid-template-columns: 1fr !important; }
   .contact-grid { grid-template-columns: 1fr !important; }
-  .form-row { grid-template-columns: 1fr !important; }
   .blog-grid { grid-template-columns: 1fr !important; }
   .related-grid { grid-template-columns: 1fr !important; }
   .story-row { grid-template-columns: 1fr !important; gap: 18px !important; }

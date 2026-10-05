@@ -3,7 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ApplicationForm from "@/components/ApplicationForm";
+import CognitoForm from "@/components/CognitoForm";
 
 const TITLE = "Join Our Practice | Contact Oasis Vein & Vitality";
 const DESCRIPTION =
@@ -122,7 +122,7 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-          <ApplicationForm />
+          <CognitoForm />
         </div>
       </section>
 
