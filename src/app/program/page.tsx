@@ -86,7 +86,7 @@ const faqs = [
   },
   {
     q: "How often will I see Dr. Mehta?",
-    a: "The cadence of visits is tailored to your needs. New clients typically have more frequent touchpoints during the first few months as the initial protocol is implemented and calibrated. Over time, the rhythm settles into periodic reassessments and ongoing monitoring, with direct access to Dr. Mehta as questions arise between visits.",
+    a: "The cadence of visits is tailored to your needs. New clients typically have more frequent touchpoints during the first few months as the initial protocol is implemented and calibrated. Over time, the rhythm settles into periodic reassessments and ongoing monitoring, with direct contact with Dr. Mehta as questions arise between visits.",
   },
   {
     q: "Does insurance cover this?",
@@ -400,7 +400,7 @@ export default function ProgramPage() {
             <p style={{ marginBottom: 18 }}>
               The initial assessment is the beginning, not the destination. Your ongoing relationship with Dr. Mehta
               includes annual baseline reassessment, periodic lab work to track your trajectory, protocol adjustments
-              as new evidence emerges, and direct physician access when questions arise.
+              as new evidence emerges, and direct physician contact when questions arise.
             </p>
             <p style={{ marginBottom: 18 }}>
               When something concerning is found — and in preventive medicine, finding things early is the point —

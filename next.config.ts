@@ -21,6 +21,14 @@ const nextConfig: NextConfig = {
       { source: "/reviews", destination: "/", permanent: true },
       { source: "/before-after", destination: "/aesthetics", permanent: true },
       { source: "/book-consultation", destination: "/contact", permanent: true },
+      { source: "/veins", destination: "/aesthetics/varicose-veins", permanent: true },
+      { source: "/vitality", destination: "/program", permanent: true },
+      // Article was not migrated; send to the longevity pillar page on the same topic.
+      {
+        source: "/blog/what-a-board-certified-cardiologist-and-vein-disease-expert-wants-people-to-know-about-aging-1",
+        destination: "/longevity-medicine-scottsdale",
+        permanent: true,
+      },
     ];
   },
 };

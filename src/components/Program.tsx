@@ -57,7 +57,7 @@ const steps = [
   {
     n: "03",
     title: "Ongoing Partnership",
-    body: "Continuous physician access, annual labs, quarterly reviews, evolving protocols. Your strategy adapts as you do.",
+    body: "Continuous physician availability, annual labs, quarterly reviews, evolving protocols. Your strategy adapts as you do.",
   },
 ];
 

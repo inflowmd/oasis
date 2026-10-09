@@ -32,7 +32,7 @@ const steps: Step[] = [
   {
     n: "3",
     title: (<>Your Ongoing <span className="fdi" style={{ color: "var(--gm)", fontSize: "1.25em" }}>Partnership</span></>),
-    body: "Continuous access to Dr. Mehta, annual labs, quarterly reviews, evolving interventions. Specialist referrals within his trusted network.",
+    body: "Continuous availability of Dr. Mehta, annual labs, quarterly reviews, evolving interventions. Specialist referrals within his trusted network.",
     image: "/partnership.jpeg",
     alt: "Ongoing physician-client partnership with Dr. Mehta",
   },
